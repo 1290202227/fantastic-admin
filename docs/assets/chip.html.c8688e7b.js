@@ -1,0 +1,1 @@
+const e={key:"v-502c1ccd",path:"/components/chip.html",title:"Chip 纸片",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"Props",slug:"props",children:[]},{level:2,title:"Event",slug:"event",children:[]}],filePathRelative:"components/chip.md",git:{updatedTime:1630435405e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

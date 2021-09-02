@@ -1,0 +1,1 @@
+const e={key:"v-a289f552",path:"/guide-vue2/storage.html",title:"私有 Storage 数据",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"guide-vue2/storage.md",git:{updatedTime:1630435405e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};
