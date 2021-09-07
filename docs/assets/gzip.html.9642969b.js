@@ -1,1 +1,0 @@
-const e={key:"v-28c78c46",path:"/guide-vue2/gzip.html",title:"gzip 支持",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"guide-vue2/gzip.md",git:{updatedTime:1630435405e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

@@ -1,1 +1,0 @@
-const t={key:"v-2302671d",path:"/components/auth-all.html",title:"AuthAll 鉴权",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"Props",slug:"props",children:[]},{level:2,title:"Slot",slug:"slot",children:[]}],filePathRelative:"components/auth-all.md",git:{updatedTime:1630435405e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{t as data};

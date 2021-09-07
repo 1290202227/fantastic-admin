@@ -1,0 +1,1 @@
+const t={key:"v-8ac80a78",path:"/components/fixed-action-bar.html",title:"FixedActionBar 固定底部操作栏",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"Slot",slug:"slot",children:[]}],filePathRelative:"components/fixed-action-bar.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{t as data};

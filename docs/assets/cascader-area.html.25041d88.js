@@ -1,0 +1,1 @@
+const e={key:"v-66d3f4dd",path:"/components/cascader-area.html",title:"CascaderArea 省市级联动",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"Props",slug:"props",children:[]}],filePathRelative:"components/cascader-area.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

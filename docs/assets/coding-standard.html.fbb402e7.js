@@ -1,0 +1,1 @@
+const e={key:"v-45648c32",path:"/guide-vue2/coding-standard.html",title:"代码规范",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"准备",slug:"准备",children:[]},{level:2,title:"配置",slug:"配置",children:[]}],filePathRelative:"guide-vue2/coding-standard.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

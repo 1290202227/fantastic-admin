@@ -1,0 +1,1 @@
+const e={key:"v-07be3698",path:"/guide-vue2/module.html",title:"标准模块",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"用法说明",slug:"用法说明",children:[]},{level:2,title:"功能介绍",slug:"功能介绍",children:[]}],filePathRelative:"guide-vue2/module.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

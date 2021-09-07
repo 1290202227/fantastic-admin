@@ -44,12 +44,6 @@ git clone -b template-vue2 https://gitee.com/hooray/fantastic-admin.git
 做好准备工作后，依次执行下面的命令：
 
 ```bash
-# 克隆项目（如果本地已有源码，可跳过这步）
-# 可选择从 github 或 gitee 克隆项目
-git clone https://github.com/hooray/fantastic-admin.git
-# 或者
-git clone https://gitee.com/hooray/fantastic-admin.git
-
 # 进入项目目录
 cd fantastic-admin
 # 专业版

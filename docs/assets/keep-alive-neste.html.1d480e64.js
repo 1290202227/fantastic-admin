@@ -1,0 +1,1 @@
+const e={key:"v-e4b29f8a",path:"/guide-vue2/keep-alive-neste.html",title:"多级页面缓存",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"总结",slug:"总结",children:[]}],filePathRelative:"guide-vue2/keep-alive-neste.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};
