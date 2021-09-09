@@ -170,6 +170,7 @@ module.exports = {
 				{
 					text: '其它',
 					children: [
+						'vue3-composition-api.md',
 						'upgrade.md',
 						'vue2-to-vue3.md',
 						'vea-to-fa.md'

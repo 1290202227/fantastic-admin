@@ -1,0 +1,7 @@
+
+/**
+ * name: Fantastic-admin
+ * homepage: https://hooray.gitee.io/fantastic-admin/
+ */
+    
+import{r as e,an as t,L as s,l as a,J as i,s as o,n as l}from"./vendor.7707186e.js";const r={props:{id:{type:[Number,String],default:""}},data(){return{loading:!1,form:{id:this.id,title:""},rules:{title:[{required:!0,message:"请输入标题",trigger:"blur"}]}}},mounted(){""!=this.form.id&&this.getInfo()},methods:{getInfo(){this.loading=!0,this.$api.get("pages_example/form_mode/detail",{baseURL:"/mock/",params:{id:this.form.id}}).then((e=>{this.loading=!1,this.form.title=e.data.title}))},submit(e){""==this.form.id?this.$refs.form.validate((t=>{t&&this.$api.post("pages_example/form_mode/create",this.form,{baseURL:"/mock/"}).then((()=>{this.$message.success({message:"模拟新增成功",center:!0}),e&&e()}))})):this.$refs.form.validate((t=>{t&&this.$api.post("pages_example/form_mode/edit",this.form,{baseURL:"/mock/"}).then((()=>{this.$message.success({message:"模拟编辑成功",center:!0}),e&&e()}))}))}}};r.render=function(r,m,d,f,n,u){const p=e("el-input"),h=e("el-form-item"),g=e("el-form"),c=t("loading");return s((a(),i("div",null,[o(g,{ref:"form",model:n.form,rules:n.rules,"label-width":"120px","label-suffix":"："},{default:l((()=>[o(h,{label:"标题",prop:"title"},{default:l((()=>[o(p,{modelValue:n.form.title,"onUpdate:modelValue":m[0]||(m[0]=e=>n.form.title=e),placeholder:"请输入标题"},null,8,["modelValue"])])),_:1})])),_:1},8,["model","rules"])],512)),[[c,n.loading]])},r.__scopeId="data-v-79271cec";export{r as default};

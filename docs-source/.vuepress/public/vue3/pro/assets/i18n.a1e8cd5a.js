@@ -1,0 +1,7 @@
+
+/**
+ * name: Fantastic-admin
+ * homepage: https://hooray.gitee.io/fantastic-admin/
+ */
+    
+import{_ as e}from"./index.ffbd20e5.js";import{_ as n}from"./index.f03e52fd.js";import{r as t,l as a,J as o,s as r,n as i}from"./vendor.7707186e.js";function l(e){e.__i18n=e.__i18n||[],e.__i18n.push({locale:"",resource:{"zh-cn":{intro:e=>{const{normalize:n}=e;return n(["除了支持全局多语言切换，还支持 Vue 单文件模式语言切换，你可以尝试在这个页面点击右上角的语言切换试试"])}},"zh-tw":{intro:e=>{const{normalize:n}=e;return n(["除了支持全局多語言切換，還支持 Vue 單文件模式語言切換，你可以嘗試在這個頁面點擊右上角的語言切換試試"])}},en:{intro:e=>{const{normalize:n}=e;return n(["In addition to global multi-language switch, also support Vue single file mode language switch, you can try to click on the top right corner of the page to switch language"])}}}})}const s={data:()=>({page:1,pageSize:100}),methods:{handleSizeChange(e){this.pageSize=e},handleCurrentChange(e){this.page=e}}};l(s),s.render=function(l,s,g,u,h,p){const c=e,d=t("el-pagination"),z=n;return a(),o("div",null,[r(c,{title:l.$t("route.i18n"),content:l.$t("intro")},null,8,["title","content"]),r(z,{title:"Element 组件"},{default:i((()=>[r(d,{"current-page":h.page,"page-sizes":[100,200,300,400],"page-size":h.pageSize,layout:"total, sizes, prev, pager, next, jumper",total:400,onSizeChange:p.handleSizeChange,onCurrentChange:p.handleCurrentChange},null,8,["current-page","page-size","onSizeChange","onCurrentChange"])])),_:1})])};export{s as default};
