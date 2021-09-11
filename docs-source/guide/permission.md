@@ -35,28 +35,28 @@ meta: {
 
 页面中某个模块，当前用户具备该权限是如何显示，不具备该权限又是如何显示，针对这样的需求，框架提供了 `<Auth>` 和 `<AuthAll>` 组件，具体使用如下：
 
-```html
+```html:no-line-numbers
 <!-- 单权限验证 -->
 <Auth :value="'department.create'">
-    你有该权限
-    <template slot="no-auth">
-        你没有该权限
+    <p>你有该权限</p>
+    <template #no-auth>
+        <p>你没有该权限</p>
     </template>
 </Auth>
 
 <!-- 多权限验证，用户只要具备其中任何一个权限，则验证通过 -->
 <Auth :value="['department.create', 'department.edit']">
-    你有该权限
-    <template slot="no-auth">
-        你没有该权限
+    <p>你有该权限</p>
+    <template #no-auth>
+        <p>你没有该权限</p>
     </template>
 </Auth>
 
 <!-- 多权限验证，用户必须具备全部权限，才验证通过 -->
 <AuthAll :value="['department.create', 'department.edit']">
-    你有该权限
-    <template slot="no-auth">
-        你没有该权限
+    <p>你有该权限</p>
+    <template #no-auth>
+        <p>你没有该权限</p>
     </template>
 </AuthAll>
 ```
@@ -65,7 +65,7 @@ meta: {
 
 对于单个元素，也提供了 `v-auth` 和 `v-auth-all` 鉴权指令，使用上对比鉴权组件更方便，当然它能做的事情也更简单。
 
-```html
+```html:no-line-numbers
 <!-- 单权限验证 -->
 <button v-auth="'department.create'">新增部门</button>
 
@@ -78,9 +78,9 @@ meta: {
 
 ## 鉴权函数
 
-鉴权组件和鉴权指令控制的是页面上的元素是否展示，而鉴权函数则更多是使用在业务流程代码里的权限判断。
+鉴权组件和鉴权指令控制的是页面上的元素，而鉴权函数则更多是使用在业务流程代码里的权限判断。
 
-```js
+```js:no-line-numbers
 // 单权限验证，返回 true 或 false
 this.$auth('department.create')
 
@@ -93,14 +93,15 @@ this.$authAll(['department.create', 'department.edit'])
 
 ## 演示
 
-在 `src/store/modules/user.js` 文件里 action 下有个 `getPermissions` 的方法，在实际项目开发中，记得修改该方法。
+在 `src/store/modules/user.js` 文件里 action 下有个 `getPermissions` 的方法，该方法用于登录成功后获取用户权限，在项目开发中，需要根据实际情况进行修改。框架默认通过 mock 模拟获取用户权限。
 
-```js
+```js:no-line-numbers
 // 获取我的权限
-getPermissions({state, commit}) {
+getPermissions({ state, commit }) {
     return new Promise(resolve => {
         // 通过 mock 获取权限
-        api.get('mock/member/permission', {
+        api.get('member/permission', {
+            baseURL: '/mock/',
             params: {
                 account: state.account
             }
@@ -112,7 +113,7 @@ getPermissions({state, commit}) {
 }
 ```
 
-在框架演示中，提供了两组权限，你可以在“权限验证”栏目里切换帐号查看不同权限下的效果。如果使用的不是 `admin` 或 `test` 用户名登录，则看不到“权限验证”模块。
+在框架演示中，提供了两组权限，你可以在“权限验证”导航里切换帐号查看不同权限下的效果。如果使用的不是 `admin` 或 `test` 用户名登录，则在导航栏里看不到“权限验证”导航入口。
 
 ## 小技巧
 
@@ -120,7 +121,7 @@ getPermissions({state, commit}) {
 
 当然了，业务有大有小，针对一些小型的管理系统，对权限这块没有这么多复杂的要求，甚至什么角色拥有什么权限都是写死固定的，不需要自由配置。针对这种情况，框架也可以很方便的实现。
 
-```js
+```js:no-line-numbers
 import Layout from '@/layout/index.vue'
 
 export default {
