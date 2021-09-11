@@ -1,0 +1,1 @@
+const e={key:"v-5e71beb6",path:"/guide/vue3-composition-api.html",title:"使用 Composition API 开发",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"guide/vue3-composition-api.md",git:{updatedTime:1631179629e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

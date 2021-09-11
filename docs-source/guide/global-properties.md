@@ -45,7 +45,7 @@ this.$tabbar.mainPageMaximize(status)
 
 ### [dayjs](https://day.js.org/zh-CN/)
 
-这是一个轻量的处理时间和日期的 JavaScript 库。
+轻量的处理时间和日期的库。
 
 ```js:no-line-numbers
 this.$dayjs
@@ -61,7 +61,7 @@ this.$cookies
 
 ### [HotKey.js](https://wangchujiang.com/hotkeys/)
 
-一个快捷键监听的库，框架目前在页面搜索上监听了 `Ctrl + S` 这组快捷键。
+快捷键监听的库。
 
 ```js:no-line-numbers
 this.$hotkeys
@@ -69,7 +69,7 @@ this.$hotkeys
 
 ### [vue3-clipboard](https://github.com/soerenmartius/vue3-clipboard) <Badge type="tip" text="专业版" vertical="top" />
 
-一个剪贴板的库，可将数据拷贝到系统剪贴板中。
+剪贴板的库，可将数据拷贝到系统剪贴板中。
 
 ```js:no-line-numbers
 this.$clipboard
@@ -77,7 +77,7 @@ this.$clipboard
 
 ### [QRCode](https://github.com/soldair/node-qrcode) <Badge type="tip" text="专业版" vertical="top" />
 
-一个生成二维码的库，可生成图片或 canvas 二维码。
+生成二维码的库，可生成图片或 canvas 二维码。
 
 ```js:no-line-numbers
 this.$qrcode
@@ -85,7 +85,7 @@ this.$qrcode
 
 ### [mitt](https://github.com/developit/mitt)
 
-一个全局事件总线的库，也是 Vue 3 推荐的库。
+全局事件总线的库，也是 Vue 3 官方推荐的。
 
 ```js:no-line-numbers
 this.$eventBus
