@@ -130,6 +130,10 @@ module.exports = {
 						link: 'https://github.com/hooray/fantastic-admin'
 					}
 				]
+			},
+			{
+				text: '定制开发',
+				link: '/customize.md'
 			}
 		],
 		sidebar: {
