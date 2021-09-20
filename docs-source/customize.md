@@ -10,14 +10,31 @@
 
 收费模式为 3/7 ，即确认开发前，收取总费用的 30% 做为预付款，开发完成后，收取剩余 70% 尾款后，提供完整源码。开发期间我将提供预览地址，方便你了解开发进度，以及能及时沟通或调整需求。
 
-## 部分案例截图
+## 部分案例
 
 <table>
 	<tr>
-		<th colspan="5">案例</th>
+		<th>案例1</th>
 	</tr>
 	<tr>
-		<td colspan="5">
+		<td>
+			<ul style="margin: 0;">
+				<li>定制全新布局，侧边导航栏和头部导航栏区域可同时显示。</li>
+				<li>调整页面滚动条位置，仅在业务内容区域展示。</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><img :src="$withBase('/customize-project1-1.png')" style="display: block;" /></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<th colspan="3">案例2</th>
+	</tr>
+	<tr>
+		<td colspan="3">
 			<ul style="margin: 0;">
 				<li>定制全新布局，侧边导航栏默认仅显示主导航，次导航通过鼠标悬停激活，并采用固定两级导航布局。同时保留头部导航栏区域。</li>
 				<li>定制开发基础业务模块，包含部门管理、角色管理、功能(权限)管理。通过部门管理人员，人员绑定角色，角色关联功能，功能设置权限，提供了一整套后台基础通用业务模块。</li>
@@ -25,10 +42,13 @@
 		</td>
 	</tr>
 	<tr>
-		<td><img :src="$withBase('/customize-project1-1.png')" style="display: block;" /></td>
-		<td><img :src="$withBase('/customize-project1-2.png')" style="display: block;" /></td>
-		<td><img :src="$withBase('/customize-project1-3.png')" style="display: block;" /></td>
-		<td><img :src="$withBase('/customize-project1-4.png')" style="display: block;" /></td>
-		<td><img :src="$withBase('/customize-project1-5.png')" style="display: block;" /></td>
+		<td><img :src="$withBase('/customize-project2-1.png')" style="display: block;" /></td>
+		<td><img :src="$withBase('/customize-project2-2.png')" style="display: block;" /></td>
+		<td><img :src="$withBase('/customize-project2-3.png')" style="display: block;" /></td>
+	</tr>
+	<tr>
+		<td><img :src="$withBase('/customize-project2-4.png')" style="display: block;" /></td>
+		<td><img :src="$withBase('/customize-project2-5.png')" style="display: block;" /></td>
+		<td></td>
 	</tr>
 </table>
