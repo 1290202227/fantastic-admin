@@ -1,1 +1,0 @@
-import{o as a,c as e,a as r,e as s}from"./app.ab46f319.js";const n={},t={id:"错误日志",tabindex:"-1"},d=[r("a",{class:"header-anchor",href:"#错误日志","aria-hidden":"true"},"#",-1),s(" 错误日志")];n.render=function(r,s){return a(),e("h1",t,d)};export{n as default};
