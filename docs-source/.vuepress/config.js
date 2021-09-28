@@ -177,7 +177,8 @@ module.exports = {
 						'vue3-composition-api.md',
 						'upgrade.md',
 						'vue2-to-vue3.md',
-						'vea-to-fa.md'
+						'vea-to-fa.md',
+						'q-a.md'
 					]
 				}
 			],
