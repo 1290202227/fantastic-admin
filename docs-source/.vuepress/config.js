@@ -35,7 +35,6 @@ module.exports = {
 					{
 						text: '文档说明',
 						link: '/intro.md',
-						activeMatch: '/guide/',
 					},
 					{
 						text: 'Vue3 版本指南',

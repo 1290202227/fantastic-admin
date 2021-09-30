@@ -51,109 +51,165 @@
 
 <table style="display: table; margin: 1rem auto;">
 	<tr>
+		<th rowspan="2" width="200" align="center">⭐功能与服务⭐</th>
 		<th colspan="2" width="400" align="center">Vue2 版本</th>
 		<th colspan="2" width="400" align="center">Vue3 版本</th>
 	</tr>
 	<tr>
-		<td colspan="2" align="center">定期修复 bug</td>
-		<td colspan="2" align="center">长期维护更新，提供新特性，定期修复 bug</td>
-	</tr>
-	<tr>
 		<th align="center">基础版</th>
 		<th align="center">专业版</th>
 		<th align="center">基础版</th>
 		<th align="center">专业版</th>
 	</tr>
 	<tr>
-		<td width="200" style="vertical-align: top;">
-			<ul style="margin: 0;">
-				<li>基于 Vue-cli 4.x</li>
-				<li>3 套页面布局</li>
-				<li>1 款主题风格</li>
-				<li>6 个导航路由配置项</li>
-				<li>外链导航</li>
-				<li>全方位权限验证</li>
-				<li>10+ 个基础组件</li>
-				<li>12 个扩展组件</li>
-				<li>Mock 数据</li>
-				<li>文件自动生成</li>
-				<li>团队代码规范</li>
-				<li>需保留框架版权信息</li>
-			</ul>
-		</td>
-		<td width="200" style="vertical-align: top;">
-			<ul style="margin: 0;">
-				<li>基于 Vue-cli 4.x</li>
-				<li style="color: #e34d22;">12 套页面布局</li>
-				<li style="color: #e34d22;">6 款主题风格</li>
-				<li style="color: #e34d22;">12 个导航路由配置项</li>
-				<li>外链导航</li>
-				<li style="color: #e34d22;">内嵌导航</li>
-				<li style="color: #e34d22;">Tab 标签栏</li>
-				<li>全方位权限验证</li>
-				<li>10+ 个基础组件</li>
-				<li style="color: #e34d22;">18 个扩展组件</li>
-				<li style="color: #e34d22;">国际化</li>
-				<li>Mock 数据</li>
-				<li style="color: #e34d22;">错误日志上报</li>
-				<li style="color: #e34d22;">复杂文件自动生成</li>
-				<li style="color: #e34d22;">业务应用静态页面</li>
-				<li>团队代码规范</li>
-				<li style="color: #e34d22;">自定义版权信息</li>
-				<li style="color: #e34d22;">一对一技术支持</li>
-			</ul>
-		</td>
-		<td width="200" style="vertical-align: top;">
-			<ul style="margin: 0;">
-				<li>基于 vite 2.x</li>
-				<li>3 套页面布局</li>
-				<li>1 款主题风格</li>
-				<li>8 个导航路由配置项</li>
-				<li>外链导航</li>
-				<li>全方位权限验证</li>
-				<li>10+ 个基础组件</li>
-				<li>12 个扩展组件</li>
-				<li>Mock 数据</li>
-				<li>文件自动生成</li>
-				<li>团队代码规范</li>
-				<li>需保留框架版权信息</li>
-			</ul>
-		</td>
-		<td width="200" style="vertical-align: top;">
-			<ul style="margin: 0;">
-				<li>基于 vite 2.x</li>
-				<li style="color: #e34d22;">20 套页面布局</li>
-				<li style="color: #e34d22;">6 款主题风格</li>
-				<li style="color: #e34d22;">15 个导航路由配置项</li>
-				<li>外链导航</li>
-				<li style="color: #e34d22;">内嵌导航</li>
-				<li style="color: #e34d22;">Tab 标签栏</li>
-				<li>全方位权限验证</li>
-				<li>10+ 个基础组件</li>
-				<li style="color: #e34d22;">18 个扩展组件</li>
-				<li style="color: #e34d22;">国际化</li>
-				<li>Mock 数据</li>
-				<li style="color: #e34d22;">错误日志上报</li>
-				<li style="color: #e34d22;">复杂文件自动生成</li>
-				<li style="color: #e34d22;">业务应用静态页面（长期扩充）</li>
-				<li>团队代码规范</li>
-				<li style="color: #e34d22;">自定义版权信息</li>
-				<li style="color: #e34d22;">一对一技术支持</li>
-			</ul>
-		</td>
+		<td align="center">长期维护更新，提供新特性</td>
+		<td colspan="2" align="center"></td>
+		<td colspan="2" align="center">✔️</td>
 	</tr>
 	<tr>
+		<td align="center">定期修复 bug</td>
+		<td colspan="2" align="center">✔️</td>
+		<td colspan="2" align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">开发与构建工具</td>
+		<td colspan="2" align="center">vue-cli 4.x</td>
+		<td colspan="2" align="center">vite 2.x</td>
+	</tr>
+	<tr>
+		<td align="center">UI 组件库</td>
+		<td colspan="2" align="center">Element UI</td>
+		<td colspan="2" align="center">Element Plus</td>
+	</tr>
+	<tr>
+		<td align="center">页面布局</td>
+		<td align="center">3 套</td>
+		<td align="center" style="color: #e34d22;">12 套</td>
+		<td align="center">3 套</td>
+		<td align="center" style="color: #e34d22;">20 套</td>
+	</tr>
+	<tr>
+		<td align="center">主题风格</td>
+		<td align="center">1 款</td>
+		<td align="center" style="color: #e34d22;">6 款</td>
+		<td align="center">1 款</td>
+		<td align="center" style="color: #e34d22;">6 款</td>
+	</tr>
+	<tr>
+		<td align="center">导航路由配置项</td>
+		<td align="center">6 个</td>
+		<td align="center" style="color: #e34d22;">12 个</td>
+		<td align="center">8 个</td>
+		<td align="center" style="color: #e34d22;">15 个</td>
+	</tr>
+	<tr>
+		<td align="center">外链导航</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">内嵌导航</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">Tab 标签栏</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">全方位权限验证</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">扩展组件</td>
+		<td align="center">12 个</td>
+		<td align="center" style="color: #e34d22;">18 个</td>
+		<td align="center">12 个</td>
+		<td align="center" style="color: #e34d22;">18 个</td>
+	</tr>
+	<tr>
+		<td align="center">国际化</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">Mock 数据</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">错误日志上报</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">文件自动生成</td>
+		<td align="center">支持部分</td>
+		<td align="center">✔️</td>
+		<td align="center">支持部分</td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">业务应用静态页面</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">团队代码规范</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">框架版权信息</td>
+		<td align="center">需保留</td>
+		<td align="center">可删除</td>
+		<td align="center">需保留</td>
+		<td align="center">可删除</td>
+	</tr>
+	<tr>
+		<td align="center">技术交流QQ群</td>
+		<td colspan="4" align="center">1001394973</td>
+	</tr>
+	<tr>
+		<td align="center">作者一对一技术支持</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+		<td align="center"></td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
+		<td align="center">演示地址</td>
 		<td align="center">
-			<a href="vue2/basic" target="_blank">查看演示</a>
+			<a href="vue2/basic" target="_blank">访问</a>
 		</td>
 		<td align="center">
-			<a href="vue2/pro" target="_blank">查看演示</a>
+			<a href="vue2/pro" target="_blank">访问</a>
 		</td>
 		<td align="center">
-			<a href="vue3/basic" target="_blank">查看演示</a>
+			<a href="vue3/basic" target="_blank">访问</a>
 		</td>
 		<td align="center">
-			<a href="vue3/pro" target="_blank">查看演示</a>
+			<a href="vue3/pro" target="_blank">访问</a>
 		</td>
 	</tr>
 </table>
