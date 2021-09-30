@@ -73,7 +73,7 @@ export default {
 import Example from './modules/example'
 
 const asyncRoutes = [
-	...,
+    ...,
     {
         meta: {
             title: '页面',
@@ -92,28 +92,29 @@ const asyncRoutes = [
 
 先打开 `list.vue` 文件，找到 `onCreate()` 和 `onEdit()` 方法并替换：
 
-```js:no-line-numbers {4,14}
-onCreate() {
-    if (this.formMode === 'router') {
-        this.$router.push({
+```js:no-line-numbers {4,15}
+function onCreate() {
+    if (data.value.formMode === 'router') {
+        router.push({
             name: 'exampleCreate'
         })
     } else {
-        this.formModeProps.id = ''
-        this.formModeProps.visible = true
+        data.value.formModeProps.id = ''
+        data.value.formModeProps.visible = true
     }
-},
-onEdit(row) {
-    if (this.formMode === 'router') {
-        this.$router.push({
+}
+
+function onEdit(row) {
+    if (data.value.formMode === 'router') {
+        router.push({
             name: 'exampleEdit',
             params: {
                 id: row.id
             }
         })
     } else {
-        this.formModeProps.id = row.id
-        this.formModeProps.visible = true
+        data.value.formModeProps.id = row.id
+        data.value.formModeProps.visible = true
     }
 }
 ```
@@ -127,11 +128,11 @@ onEdit(row) {
 ```
 
 ```js:no-line-numbers {3,5}
-goBack() {
-    if (this.$store.state.settings.enableTabbar && !this.$store.state.settings.enableMergeTabbar) {
-        this.$tabbar.close({ name: 'exampleList' })
+function goBack() {
+    if (store.state.settings.enableTabbar && !store.state.settings.enableMergeTabbar) {
+        proxy.$tabbar.close({ name: 'exampleList' })
     } else {
-        this.$router.push({ name: 'exampleList' })
+        proxy.$router.push({ name: 'exampleList' })
     }
 }
 ```
@@ -144,57 +145,73 @@ goBack() {
 
 功能部分的介绍主要还是要看代码，先从列表页 `list.vue` 开始。
 
-最先看到的是这段 `mixins` 混入，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `./src/mixins/pagination.js` 方便复用。
+最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `./src/util/pagination.js` 方便复用。
 
 ```js:no-line-numbers
-import paginationMixin from '@/mixins/pagination'
-
-export default {
-    ...
-    mixins: [paginationMixin],
-    ...
-}
+import { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } from '@/util/pagination.js'
 ```
 
-接着在 `data` 对象里存放的是标准模块提供的一些配置项和必要数据参数字段。
+接着在 `data` 里存放的是标准模块提供的一些配置项和必要数据参数字段。
 
-```js:no-line-numbers {9,21}
-data() {
-    return {
-        /**
-         * 详情展示模式
-         * router 路由跳转
-         * dialog 对话框
-         * drawer 抽屉
-         */
-        formMode: 'router',
-        // 详情
-        formModeProps: {
-            visible: false,
-            id: ''
-        },
-        // 搜索
-        search: {
-            title: ''
-        },
-        // 批量操作
-        batch: {
-            enable: true,
-            selectionDataList: []
-        },
-        // 列表数据
-        dataList: []
-    }
-}
+```js:no-line-numbers {9,25}
+const data = ref({
+    loading: false,
+    /**
+     * 详情展示模式
+     * router 路由跳转
+     * dialog 对话框
+     * drawer 抽屉
+     */
+    formMode: 'router',
+    // 详情
+    formModeProps: {
+        visible: false,
+        id: ''
+    },
+    // 搜索
+    search: {
+        account: '',
+        name: '',
+        mobile: '',
+        sex: ''
+    },
+    searchMore: false,
+    // 批量操作
+    batch: {
+        enable: true,
+        selectionDataList: []
+    },
+    // 列表数据
+    dataList: []
+})
 ```
 
 标准模块提供了 3 种详情展示模式，默认是路由跳转的方式，你可以修改 `formMode: 'dialog'` 开启详情弹窗模式，保存后效果如下：
 
 <p><img :src="$withBase('/module2.gif')" /></p>
 
-再往下就是需要你自己编写业务代码的部分了。
+紧接着的是下面这段代码，它的作用是当列表页开启缓存时，并以路由跳转的方式进入详情页进行新增或编辑操作后，先对缓存的列表页进行一次数据更新，然后再跳转回列表页，这样即可以保证列表页相关搜索、翻页等状态可以被缓存，又能保证数据是最新。具体实现则是通过绑定一个事件总线，并在详情页里调用这个事件。需要注意的是，专业版如果开启标签栏，事件总线的名称得确保唯一。
 
-详情页代码就不介绍了，相对比较简单，表单部分单独封装成组件存放在 `./src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormMode` 的文件夹，这样的用意是让表单可以复用，**可以通过传统路由跳转的形式进入详情页，也可以通过弹窗或抽屉的形式打开详情页**。
+```js:no-line-numbers
+onMounted(() => {
+    getDataList()
+    if (data.value.formMode === 'router') {
+        proxy.$eventBus.on('get-data-list', () => {
+            getDataList()
+        })
+    }
+})
+
+onBeforeUnmount(() => {
+    if (data.value.formMode === 'router') {
+        proxy.$eventBus.off('get-data-list')
+    }
+})
+```
+
+再往下就是需要你修改或编写业务代码的部分，这里就不继续展开了。
+
+详情页的代码就不多介绍了，相对比较简单，可自行阅读理解。其中表单部分单独封装成组件存放在 `./src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormMode` 的文件夹，这样的用意是让表单可以复用，**可以通过路由跳转的形式进入详情页，也可以通过弹窗或抽屉的形式打开详情页**。
 
 可能有人会有疑问，为什么不在生成文件的时候直接让我选择用哪种形式，这样生成出来就是哪种，而是在生成好的代码文件里再进行配置？
 

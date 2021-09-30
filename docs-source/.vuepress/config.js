@@ -30,30 +30,25 @@ module.exports = {
 		search: false,
 		navbar: [
 			{
-				text: 'Vue3 版本指南',
-				link: '/guide/ready.md',
-				activeMatch: '/guide/'
+				text: '开发指南',
+				children: [
+					{
+						text: '文档说明',
+						link: '/intro.md',
+						activeMatch: '/guide/',
+					},
+					{
+						text: 'Vue3 版本指南',
+						link: '/guide/ready.md',
+						activeMatch: '/guide/',
+					},
+					{
+						text: 'Vue2 版本指南',
+						link: '/guide-vue2/start.md',
+						activeMatch: '/guide-vue2/',
+					}
+				]
 			},
-			{
-				text: 'Vue2 版本指南',
-				link: '/guide-vue2/start.md',
-				activeMatch: '/guide-vue2/'
-			},
-			// {
-			// 	text: '指南',
-			// 	children: [
-			// 		{
-			// 			text: 'Vue3 版本指南',
-			// 			link: '/guide/ready.md',
-			// 			activeMatch: '/guide/',
-			// 		},
-			// 		{
-			// 			text: 'Vue2 版本指南',
-			// 			link: '/guide-vue2/start.md',
-			// 			activeMatch: '/guide-vue2/',
-			// 		}
-			// 	]
-			// },
 			{
 				text: '组件',
 				link: '/components/'
