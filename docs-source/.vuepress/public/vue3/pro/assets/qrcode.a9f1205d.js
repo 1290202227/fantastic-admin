@@ -1,9 +1,0 @@
-
-/**
- * 由 Fantastic-admin 提供技术支持
- * https://hooray.gitee.io/fantastic-admin/
- * Powered by Fantastic-admin
- * https://hooray.github.io/fantastic-admin/
- */
-    
-import{_ as t}from"./index.9fbc5cc3.js";import{_ as a}from"./index.c535d87f.js";import{_ as e}from"./plugin-vue_export-helper.5a098b48.js";import{r as s,l,H as r,s as n,n as i,I as o,S as c}from"./vendor.e59ac5d6.js";const d={data:()=>({url1:"",url2:"",url3:""}),mounted(){this.$qrcode.toDataURL("Fantastic-admin 真棒！").then((t=>{this.url1=t})).catch((t=>{})),this.$qrcode.toCanvas(this.$refs.canvas,"Fantastic-admin 真棒！").then((()=>{})).catch((t=>{})),this.$qrcode.toDataURL("Fantastic-admin 真棒！",{color:{dark:"#5482EE",light:"#E8E8E8"}}).then((t=>{this.url2=t})).catch((t=>{})),this.$qrcode.toDataURL("Fantastic-admin 真棒！",{width:100}).then((t=>{this.url3=t})).catch((t=>{}))},methods:{open(t){window.open(t,"top")}}},u=c("node-qrcode 官网"),m=["src"],f={ref:"canvas"},h=["src"],_=["src"];var p=e(d,[["render",function(e,c,d,p,g,v){const b=s("el-button"),q=t,x=a,y=s("el-col"),E=s("el-row");return l(),r("div",null,[n(q,{title:"二维码"},{default:i((()=>[n(b,{icon:"el-icon-link",onClick:c[0]||(c[0]=t=>v.open("https://github.com/soldair/node-qrcode"))},{default:i((()=>[u])),_:1})])),_:1}),n(E,{gutter:20,style:{margin:"0 10px"}},{default:i((()=>[n(y,{sm:6},{default:i((()=>[n(x,{title:"渲染成 img 标签",style:{margin:"0"}},{default:i((()=>[o("img",{src:g.url1},null,8,m)])),_:1})])),_:1}),n(y,{sm:6},{default:i((()=>[n(x,{title:"渲染成 canvas 标签",style:{margin:"0"}},{default:i((()=>[o("canvas",f,null,512)])),_:1})])),_:1}),n(y,{sm:6},{default:i((()=>[n(x,{title:"自定义颜色",style:{margin:"0"}},{default:i((()=>[o("img",{src:g.url2},null,8,h)])),_:1})])),_:1}),n(y,{sm:6},{default:i((()=>[n(x,{title:"指定宽度",style:{margin:"0"}},{default:i((()=>[o("img",{src:g.url3},null,8,_)])),_:1})])),_:1})])),_:1})])}],["__scopeId","data-v-5bf13ab7"]]);export{p as default};
