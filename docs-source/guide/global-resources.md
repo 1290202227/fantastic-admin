@@ -2,14 +2,76 @@
 
 ## SVG 图标
 
-越来越多项目开始使用 SVG 图标做为精灵图的替代品，本框架也提供了 SVG 图标支持，推荐去[阿里巴巴矢量图标库](https://www.iconfont.cn/)下载高质量 SVG 图标。
+越来越多项目开始使用 SVG 图标来代替精灵图或者字体图标，本框架也提供了 SVG 图标支持，你有三种使用方式。
 
-使用 SVG 图标也很简单，首先将 svg 文件放到 `./src/assets/icons/` 目录下，然后在页面中就可以通过 `<svg-icon />` 组件使用了，name 就是 svg 文件名，如下：
+### Element Plus 图标
 
-```html:no-line-numbers
-<!-- <svg-icon /> 组件无需手动注册即可使用 -->
+:::warning 警告
+由于 Element Plus 团队正在将原有组件内的 Font Icon 向 SVG Icon 迁移，并且 Font Icon 将会在第一个正式版发布后被废弃，所以不建议继续使用。
+:::
+
+框架已默认将 Element Plus 图标注册到全局，并且增加了 `el-` 前缀避免组件名冲突。你可以通过以下方式直接在页面中使用。
+
+```vue:no-line-numbers
+<el-icon>
+    <el-search />
+</el-icon>
+```
+
+全局注册会影响项目构建体积和加载速度，如果你希望图标是按需引入并使用，你可以删除 `./src/main.js` 里这段代码：
+
+```js:no-line-numbers
+import * as ElementIcons from '@element-plus/icons'
+// 将 element-plus 的图标库注册到全局
+for (var key in ElementIcons) {
+    app.component(`El${ElementIcons[key].name}`, ElementIcons[key])
+}
+```
+
+然后在需要使用到的地方手动引入：
+
+```vue:no-line-numbers
+<el-icon>
+    <search />
+</el-icon>
+
+<script setup>
+import { search } from '@element-plus/icons'
+</script>
+```
+
+### 自定义图标
+
+你可以在框架中使用自定义的 SVG 图标文件，推荐去[阿里巴巴矢量图标库](https://www.iconfont.cn/)下载高质量 SVG 图标文件。
+
+使用 SVG 图标文件也很简单，首先将 svg 文件放到 `./src/assets/icons/` 目录下，然后在页面中就可以通过 `<svg-icon />` 组件使用了，name 就是 svg 文件名，如下：
+
+```vue:no-line-numbers
+<!-- <svg-icon> 组件无需手动注册即可使用 -->
 <svg-icon name="example" />
 ```
+
+### Iconify 图标 <Badge type="tip" text="专业版" vertical="top" />
+
+:::tip 介绍
+[Iconify](https://github.com/iconify/iconify) 提供 100+ 套图标集，100,000+ 个图标可以免费使用。借助 [unplugin-icons](https://github.com/antfu/unplugin-icons) 提供的能力，你可以在框架中轻松使用这些图标，而无需担心构建体积和加载速度，因为它们都是按需构建、按需加载的。
+:::
+
+你可以在 [Icônes](https://icones.js.org/) 上查找你想要的图标（这是一个基于 Iconify 的在线图标搜索网站）。
+
+<p><img :src="$withBase('/icones1.png')" /></p>
+
+<p><img :src="$withBase('/icones2.png')" /></p>
+
+当你需要用到某个图标的时候，你可以通过 `<i-{集合名}-{图标名} />` 的方式去使用它。
+
+以上图为例，其中红框部分的格式为 `{集合名}:{图标名}` ，所以在框架中使用就是下面这样。
+
+```vue
+<i-mdi-account-box />
+```
+
+> unplugin-icons 会在你使用到某个图标集的时候，判断是否安装相关依赖，如果没有则自动安装并刷新程序，整个过程全自动，无需手动干预。你可以在框架中使用任意图标集里的任意图标，构建的时候只会构建使用到的图标，而不会对整个图标集进行构建，你无需担心。
 
 ## 图片
 
