@@ -123,6 +123,36 @@ this.$api.get('/new/list')
 this.$api2.get('/new/list')
 ```
 
+需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `./src/api/index2.js` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
+
+```js:no-line-numbers {2}
+const api = axios.create({
+    baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy2/' : import.meta.env.VITE_APP_API_BASEURL_2,
+    timeout: 10000,
+    responseType: 'json'
+})
+```
+
+同时在 vite.config.js 里增加一段新的 proxy 配置：
+
+```js:no-line-numbers {9-13}
+// vite.config.js 中 proxy 配置，该配置即用于代理 API 请求
+server: {
+    proxy: {
+        '/proxy': {
+            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
+            changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+            rewrite: path => path.replace(/\/proxy/, '')
+        },
+        '/proxy2': {
+            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL_2,
+            changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+            rewrite: path => path.replace(/\/proxy2/, '')
+        }
+    }
+}
+```
+
 ## Mock
 
 Mock 数据是前端开发过程中必不可少的一环，是分离前后端开发的关键链路。通过预先跟服务器端约定好的接口，模拟请求数据甚至逻辑，能够让前端开发独立自主，不会被服务端的开发所阻塞。
