@@ -57,7 +57,7 @@ import { search } from '@element-plus/icons'
 [Iconify](https://github.com/iconify/iconify) 提供 100+ 套图标集，100,000+ 个图标可以免费使用。借助 [unplugin-icons](https://github.com/antfu/unplugin-icons) 提供的能力，你可以在框架中轻松使用这些图标，而无需担心构建体积和加载速度，因为它们都是按需构建、按需加载的。
 :::
 
-你可以在 [Icônes](https://icones.js.org/) 上查找你想要的图标（这是一个基于 Iconify 的在线图标搜索网站）。
+你可以在 [Icônes](https://icones.js.org/) 上查找你想要的图标（这是一个基于 Iconify 的在线图标搜索网站），或者也可以在 vscode 里安装 [Icônes](https://marketplace.visualstudio.com/items?itemName=afzalsayed96.icones) 扩展。
 
 <p><img :src="$withBase('/icones1.png')" /></p>
 
