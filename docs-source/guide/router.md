@@ -167,6 +167,8 @@ activeIcon: 'ri-star-fill'
 | :-----: | :------: | :----------------- |
 | boolean |    ✖️     | 子导航是否默认展开 |
 
+使用该特性时，建议在框架配置里关闭 `sidebarUniqueOpened` 设置。
+
 ### auth
 
 |      类型      | 是否必须 | 说明                                                     |
