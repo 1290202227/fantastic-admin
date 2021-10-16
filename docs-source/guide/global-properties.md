@@ -90,3 +90,11 @@ this.$qrcode
 ```js:no-line-numbers
 this.$eventBus
 ```
+
+### [iNotify](https://github.com/jaywcjlove/iNotify) <Badge type="tip" text="专业版" vertical="top" />
+
+支持 favicon、网页标题、Chrome桌面通知。
+
+```js:no-line-numbers
+this.$iNotify
+```
