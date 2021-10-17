@@ -13,9 +13,9 @@ pnpm run dev
 运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:9000`
 
 ::: warning 注意
-安装依赖时如果提示 husky 安装失败，请使用 `git init` 对项目进行初始化，然后重新安装依赖即可。
+husky 在安装时会检测当前目录下是否存在 `.git/` 目录，所以请确保已经使用 `git init` 对项目进行过 git 环境初始化，否则会提示 husky 安装失败。但如果框架根目录并不是项目根目录，例如项目目录是 `project/` ，而框架目录是 `project/fantastic-admin/` 的话，则需要在 `package.json` 里找到 `"prepare": "husky install"` 并修改为 `"prepare": "cd .. && husky install"` 。
 
-husky 需要项目有 git 环境才能正常安装，详细介绍请阅读《[代码规范 - husky & lint-staged](coding-standard.md#husky-lint-staged)》。
+了解更多请阅读《[代码规范 - husky & lint-staged](coding-standard.md#husky-lint-staged)》。
 :::
 
 ::: warning 运行报错
