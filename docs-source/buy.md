@@ -1,7 +1,7 @@
 # 购买专业版
 
-:::warning 限时活动
-活动：购买 Vue3 专业版返现 100 元，并赠送 Vue2 专业版，截止至2021年10月17日，购买后联系作者进行返现。
+:::tip 点 ⭐ 可得专业版源码
+购买 Vue3 专业版，并分别在 [![star](https://img.shields.io/github/stars/hooray/fantastic-admin?style=social)](https://github.com/hooray/fantastic-admin/stargazers) 和 [![star](https://gitee.com/hooray/fantastic-admin/badge/star.svg?theme=dark)](https://gitee.com/hooray/fantastic-admin/stargazers) 给仓库点 ⭐，可免费获得 Vue2 专业版（联系作者并提供相关截图即可）。
 :::
 
 ## 购买说明
