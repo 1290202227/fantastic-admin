@@ -36,7 +36,7 @@ this.$tabbar.close(to)
 
 ```js:no-line-numbers
 // status: true / false
-this.$tabbar.mainPageMaximize(status)
+this.$mainPageMaximize(status)
 ```
 
 ## 第三方库
