@@ -128,6 +128,23 @@ module.exports = {
 			{
 				text: '定制开发',
 				link: '/customize.md'
+			},
+			{
+				text: '生态',
+				children: [
+					{
+						text: 'Fantastaic-template',
+						link: 'https://hooray.gitee.io/fantastic-template'
+					},
+					{
+						text: 'Fantastaic-admin',
+						link: 'https://hooray.gitee.io/fantastic-admin'
+					},
+					// {
+					// 	text: 'Fantastaic-admin (探索版)',
+					// 	link: 'https://hooray.gitee.io/fantastic-admin-discovery'
+					// }
+				]
 			}
 		],
 		sidebar: {
