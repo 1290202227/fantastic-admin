@@ -1,0 +1,1 @@
+const e={key:"v-bef36c56",path:"/guide-vue2/component.html",title:"组件",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"全局组件",slug:"全局组件",children:[]},{level:2,title:"局部组件",slug:"局部组件",children:[]}],filePathRelative:"guide-vue2/component.md",git:{updatedTime:1635556511e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:2}]}};export{e as data};
