@@ -1,6 +1,6 @@
 # 全局属性
 
-全局属性在 `./src/util/global.properties.js` 文件中配置。
+全局属性在 `/src/util/global.properties.js` 文件中配置。
 
 ## 框架相关
 

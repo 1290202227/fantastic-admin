@@ -2,7 +2,7 @@
 
 项目路由配置存放在 `./scr/router/modules/` 目录下，每一个 js 文件会被视为一个路由模块。
 
-所有配置的路由模块均需要在 `./src/router/index.js` 文件里进行引入并放到主导航下。
+所有配置的路由模块均需要在 `/src/router/index.js` 文件里进行引入并放到主导航下。
 
 ## 基本配置
 
@@ -95,7 +95,7 @@ export default {
 
 ### 主导航
 
-主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类，在 `./src/router/index.js` 里进行设置。
+主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类，在 `/src/router/index.js` 里进行设置。
 
 ```js
 let asyncRoutes = [
@@ -437,7 +437,7 @@ export default {
 enableBackendReturnRoute: true
 ```
 
-开启后访问 `./src/store/modules/menu.js` 文件，找到 `generateRoutesAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `./src/mock/route.js` 里查看 mock 数据。
+开启后访问 `/src/store/modules/menu.js` 文件，找到 `generateRoutesAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/route.js` 里查看 mock 数据。
 
 开启后端生成后，路由权限有两种做法，一种是后端直接返回用户具备访问权限的路由数据，另一种则返回全部的路由的数据，让框架自行处理。两种做法的区别在于第一种返回的路由数据里，无需在 meta 对象里设置 auth 参数。
 
@@ -445,7 +445,7 @@ enableBackendReturnRoute: true
 
 基于后台框架的页面都是需要登录后才能访问，如果希望增加免登录的页面，也就是脱离框架本身，相对独立的页面，你可以按照下面的方式处理。
 
-首先在 `./src/router/index.js` 里 `constantRoutes` 配置免登录页面的路由，然后在 `noLoginWhitelist` 里增加一句路由完整地址。例如下面的例子，就增加了一个 `/no/login/example` 的免登录页面地址。
+首先在 `/src/router/index.js` 里 `constantRoutes` 配置免登录页面的路由，然后在 `noLoginWhitelist` 里增加一句路由完整地址。例如下面的例子，就增加了一个 `/no/login/example` 的免登录页面地址。
 
 ```js:no-line-numbers {4-11,17}
 // 固定路由

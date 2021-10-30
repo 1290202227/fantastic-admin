@@ -19,9 +19,9 @@
 √  ++ \src\mock\example.js
 ```
 
-这里我已经通过命令在 `./src/views/` 目录下创建好了一个 example 文件夹，并且也生成了 mock 数据。接下来需要去配置下路由，这样我们才可以在导航栏里访问到。
+这里我已经通过命令在 `/src/views/` 目录下创建好了一个 example 文件夹，并且也生成了 mock 数据。接下来需要去配置下路由，这样我们才可以在导航栏里访问到。
 
-首先在 `./src/router/modules/` 目录下新建一个与文件夹同名的 `example.js` 文件，并在里面复制以下代码：
+首先在 `/src/router/modules/` 目录下新建一个与文件夹同名的 `example.js` 文件，并在里面复制以下代码：
 
 ```js:no-line-numbers
 const Layout = () => import('@/layout/index.vue')
@@ -67,7 +67,7 @@ export default {
 }
 ```
 
-然后到 `./src/router/index.js` 文件里加上这个路由配置文件的引用。
+然后到 `/src/router/index.js` 文件里加上这个路由配置文件的引用。
 
 ```js:no-line-numbers {1,12}
 import Example from './modules/example'
@@ -145,7 +145,7 @@ function goBack() {
 
 功能部分的介绍主要还是要看代码，先从列表页 `list.vue` 开始。
 
-最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `./src/util/pagination.js` 方便复用。
+最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/util/pagination.js` 方便复用。
 
 ```js:no-line-numbers
 import { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } from '@/util/pagination.js'
@@ -211,7 +211,7 @@ onBeforeUnmount(() => {
 
 再往下就是需要你修改或编写业务代码的部分，这里就不继续展开了。
 
-详情页的代码就不多介绍了，相对比较简单，可自行阅读理解。其中表单部分单独封装成组件存放在 `./src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormMode` 的文件夹，这样的用意是让表单可以复用，**可以通过路由跳转的形式进入详情页，也可以通过弹窗或抽屉的形式打开详情页**。
+详情页的代码就不多介绍了，相对比较简单，可自行阅读理解。其中表单部分单独封装成组件存放在 `/src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormMode` 的文件夹，这样的用意是让表单可以复用，**可以通过路由跳转的形式进入详情页，也可以通过弹窗或抽屉的形式打开详情页**。
 
 可能有人会有疑问，为什么不在生成文件的时候直接让我选择用哪种形式，这样生成出来就是哪种，而是在生成好的代码文件里再进行配置？
 

@@ -8,7 +8,7 @@
 
 ## 拦截器
 
-在 `./src/api/index.js` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。因为每个公司提供的接口标准不同，所以该文件需要开发者根据实际情况去定制对应的拦截器。
+在 `/src/api/index.js` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。因为每个公司提供的接口标准不同，所以该文件需要开发者根据实际情况去定制对应的拦截器。
 
 代码很简单，首先初始化 axios 对象，然后 `axios.interceptors.request.use()` 和 `axios.interceptors.response.use()` 就分别是请求和响应的拦截代码了。
 
@@ -35,7 +35,7 @@ this.$api.get('/new/list', {
 VUE_APP_API_ROOT_2 = 此处填写接口地址
 ```
 
-然后把 `./src/api/index.js` 文件复制一份，例如就叫 `./src/api/index2.js` ，并且将代码中的 `baseURL` 替换为 `process.env.VUE_APP_API_ROOT_2` ，最后在 `./src/main.js` 文件里引入：
+然后把 `/src/api/index.js` 文件复制一份，例如就叫 `/src/api/index2.js` ，并且将代码中的 `baseURL` 替换为 `process.env.VUE_APP_API_ROOT_2` ，最后在 `/src/main.js` 文件里引入：
 
 ```js
 import api2 from './api/index2'
@@ -73,7 +73,7 @@ module.exports = {
 }
 ```
 
-同时将 `./src/api/index.js` 文件里的 `baseURL` 配置删掉，这时候重新运行框架，请求代理就会生效了。
+同时将 `/src/api/index.js` 文件里的 `baseURL` 配置删掉，这时候重新运行框架，请求代理就会生效了。
 
 假设 `VUE_APP_API_ROOT` 配置的是 `http://baidu.com` ，那上述配置的结果就是，在请求 `/api/login` 时会转发到 `http://baidu.com/api/login` 。
 

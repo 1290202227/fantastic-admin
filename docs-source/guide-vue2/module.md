@@ -17,7 +17,7 @@
 
 通过一步步的提示设置，现在已经创建好了一个测试模块，先去路由里配置一下，看看实际页面上展示效果如何。
 
-首先在 `./src/router/modules/` 目录下新建一个 `test.js` 文件
+首先在 `/src/router/modules/` 目录下新建一个 `test.js` 文件
 
 ```js
 import Layout from '@/layout'
@@ -53,7 +53,7 @@ export default {
 }
 ```
 
-然后到 `./src/router/index.js` 文件里加上这个路由配置文件的引用。
+然后到 `/src/router/index.js` 文件里加上这个路由配置文件的引用。
 
 ```js {1,11}
 import Test from './modules/test'
@@ -109,7 +109,7 @@ onEdit(row) {
 
 功能部分的介绍主要还是要看代码，先从列表页 `list.vue` 开始。
 
-最先看到的是这段 `mixins` 混入，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `./src/mixins/pagination.js` 方便复用。
+最先看到的是这段 `mixins` 混入，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/mixins/pagination.js` 方便复用。
 
 ```js
 import paginationMixin from '@/mixins/pagination'
@@ -189,7 +189,7 @@ beforeDestroy() {
 
 再往下就是需要你自己编写业务代码的部分了。
 
-详情页代码就不贴了，相对比较简单，因为把表单部分单独封装成组件存放在 `./src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormDialog` 的文件夹，这样的用意其实很明显了，目的就是让表单可以复用，**可以通过传统路由跳转的形式进入详情页，也可以通过弹框的形式打开详情页**。
+详情页代码就不贴了，相对比较简单，因为把表单部分单独封装成组件存放在 `/src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormDialog` 的文件夹，这样的用意其实很明显了，目的就是让表单可以复用，**可以通过传统路由跳转的形式进入详情页，也可以通过弹框的形式打开详情页**。
 
 可能有人会有疑问，为什么不在生成文件的时候直接让我选择用哪种形式，这样生成出来就是哪种，而是在生成好的代码文件里再进行配置？
 

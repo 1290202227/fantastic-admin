@@ -12,7 +12,7 @@ Mockjs 虽然很好用，但是在大型项目中其实并不合适，正规的�
 
 ### 使用说明
 
-这是最常见的使用方式，你只需在 `./src/main.js` 中找到 `import './mock'` 并将其注释去掉，然后到 `./src/mock/modules/` 目录下新增 js 文件，然后在里面编写 mock 数据代码即可，例如：
+这是最常见的使用方式，你只需在 `/src/main.js` 中找到 `import './mock'` 并将其注释去掉，然后到 `/src/mock/modules/` 目录下新增 js 文件，然后在里面编写 mock 数据代码即可，例如：
 
 ```js
 // ./src/mock/modules/test.js
@@ -44,7 +44,7 @@ this.$api.get('mock/test').then(res => {
 
 <p><img :src="$withBase('/vue2/mock1.png')" /></p>
 
-你可能会问，我在 `test.js` 里定义的 `url` 是 `test` ，为什么在调用接口的时候，需要写成 `mock/test` ，这其实是框架的 mock 约定，在 `./src/mock/index.js` 里可以看到这句代码：
+你可能会问，我在 `test.js` 里定义的 `url` 是 `test` ，为什么在调用接口的时候，需要写成 `mock/test` ，这其实是框架的 mock 约定，在 `/src/mock/index.js` 里可以看到这句代码：
 
 ```js
 Mock.mock(new RegExp(`${process.env.VUE_APP_API_ROOT}mock/${mock.url}`), mock.type || 'get', mock.result)
@@ -61,7 +61,7 @@ this.$api.get('test').then(res => {
 因为请求 URL 改变了，mock 拦截不到，所以这个请求就会切换为真实接口。
 
 :::tip 扩展
-如果你不喜欢框架的这个 mock 约定，你也可以将 `./src/mock/index.js` 里改为：
+如果你不喜欢框架的这个 mock 约定，你也可以将 `/src/mock/index.js` 里改为：
 
 ```js
 Mock.mock(new RegExp(`${process.env.VUE_APP_API_ROOT}${mock.url}`), mock.type || 'get', mock.result)
@@ -75,11 +75,11 @@ this.$api.get('test').then(res => {
 })
 ```
 
-如果要切换为真实接口，到 `./src/mock/modules/test.js` 里注释或删除对应的 mock 数据即可。
+如果要切换为真实接口，到 `/src/mock/modules/test.js` 里注释或删除对应的 mock 数据即可。
 :::
 
 :::warning 注意
-mock 数据一般仅存在于开发环境，打包的时候注意将 `./src/main.js` 中的 `import './mock'` 删除或注释掉
+mock 数据一般仅存在于开发环境，打包的时候注意将 `/src/main.js` 中的 `import './mock'` 删除或注释掉
 :::
 
 ### 弊端
@@ -94,7 +94,7 @@ mock 数据一般仅存在于开发环境，打包的时候注意将 `./src/main
 
 ### 使用说明
 
-首先将 `./src/main.js` 里的 `import './mock'` 注释掉，然后到 `./src/api/index.js` 里，把 `baseURL` 注释掉或设为空
+首先将 `/src/main.js` 里的 `import './mock'` 注释掉，然后到 `/src/api/index.js` 里，把 `baseURL` 注释掉或设为空
 
 ```js {2}
 const api = axios.create({
@@ -139,7 +139,7 @@ module.exports = {
 }
 ```
 
-剩下的操作和方案一类似，在 `./src/mock/server-modules/` 目录下新增 js 文件，然后在里面编写 mock 数据代码即可，注意下编写的规则。
+剩下的操作和方案一类似，在 `/src/mock/server-modules/` 目录下新增 js 文件，然后在里面编写 mock 数据代码即可，注意下编写的规则。
 
 
 编写好 mock 后，执行下面那段请求代码，就可以在 Network 里看到真实的网络请求了，并且返回的是我们编写的 mock 数据。
@@ -172,7 +172,7 @@ this.$api.get('test')
 
 如果你需要在本框架里复原此方案，可以按照下面的步骤一步步操作：
 
-首先执行 `yarn add chokidar body-parser -D` 安装两个依赖包，然后将 `./src/api/index.js` 的 `baseURL` 注释或设为空，和方案二一样
+首先执行 `yarn add chokidar body-parser -D` 安装两个依赖包，然后将 `/src/api/index.js` 的 `baseURL` 注释或设为空，和方案二一样
 
 ```js {2}
 const api = axios.create({
@@ -183,7 +183,7 @@ const api = axios.create({
 })
 ```
 
-接着在 `./src/mock/` 目录下新建个文件，例如叫 `server-deprecated.js` ，然后复制下面代码进去
+接着在 `/src/mock/` 目录下新建个文件，例如叫 `server-deprecated.js` ，然后复制下面代码进去
 
 ```js
 const chokidar = require('chokidar')
@@ -264,7 +264,7 @@ module.exports = (app, server, compiler) => {
 }
 ```
 
-通过源码可以看到，我使用了 `fs` 模块去读取 `./src/mock/modules/` 目录下的文件，这是方案一使用的 mock 文件目录，这其实也是这套方案的一个小优势，就是 mock 文件可以和方案一通用。
+通过源码可以看到，我使用了 `fs` 模块去读取 `/src/mock/modules/` 目录下的文件，这是方案一使用的 mock 文件目录，这其实也是这套方案的一个小优势，就是 mock 文件可以和方案一通用。
 
 然后打开 `vue.config.js` 修改并设置成
 
@@ -288,7 +288,7 @@ module.exports = {
 }
 ```
 
-剩下的操作和方案一类似，在 `./src/mock/modules/` 目录下新增 js 文件，然后在里面编写 mock 数据代码即可。
+剩下的操作和方案一类似，在 `/src/mock/modules/` 目录下新增 js 文件，然后在里面编写 mock 数据代码即可。
 
 区别在于，mock 和真实接口切换调试则是需要把 `/mock` 换成 `/api` 
 

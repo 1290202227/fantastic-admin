@@ -22,25 +22,25 @@
 
 <p><img :src="$withBase('/plop-page.gif')" /></p>
 
-page 模式下，只能在 `./src/views/` 目录下选择指定的文件夹进行生成，生成的文件中，部分关键位置会被替换掉，例如 `<page-header />` 中的 `title` 会按照你输入的中文名称替换，页面的 `name` 会根据当前文件目录和文件名自动生成，确保唯一。
+page 模式下，只能在 `/src/views/` 目录下选择指定的文件夹进行生成，生成的文件中，部分关键位置会被替换掉，例如 `<page-header />` 中的 `title` 会按照你输入的中文名称替换，页面的 `name` 会根据当前文件目录和文件名自动生成，确保唯一。
 
 ## component
 
 <p><img :src="$withBase('/plop-component.gif')" /></p>
 
-component 模式可以选择生成的是全局组件还是局部组件，全局组件生成目录为 `./src/components/` ，局部组件则在 `./src/views/` 目录下选择指定的文件夹进行生成。
+component 模式可以选择生成的是全局组件还是局部组件，全局组件生成目录为 `/src/components/` ，局部组件则在 `/src/views/` 目录下选择指定的文件夹进行生成。
 
 ## store
 
 <p><img :src="$withBase('/plop-store.gif')" /></p>
 
-store 模式则会在 `./src/store/modules/` 目录下生成一个空模板
+store 模式则会在 `/src/store/modules/` 目录下生成一个空模板
 
 ## mock
 
 <p><img :src="$withBase('/plop-mock.gif')" /></p>
 
-mock 模式则会在 `./src/mock/` 目录下生成一个标准 CURD 的 mock 数据
+mock 模式则会在 `/src/mock/` 目录下生成一个标准 CURD 的 mock 数据
 
 ## module <Badge type="tip" text="专业版" vertical="top" />
 

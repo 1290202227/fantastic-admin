@@ -18,7 +18,7 @@
 </el-icon>
 ```
 
-全局注册会影响项目构建体积和加载速度，如果你希望图标是按需引入并使用，你可以删除 `./src/main.js` 里这段代码：
+全局注册会影响项目构建体积和加载速度，如果你希望图标是按需引入并使用，你可以删除 `/src/main.js` 里这段代码：
 
 ```js:no-line-numbers
 import * as ElementIcons from '@element-plus/icons'
@@ -44,7 +44,7 @@ import { search } from '@element-plus/icons'
 
 你可以在框架中使用自定义的 SVG 图标文件，推荐去[阿里巴巴矢量图标库](https://www.iconfont.cn/)下载高质量 SVG 图标文件。
 
-使用 SVG 图标文件也很简单，首先将 svg 文件放到 `./src/assets/icons/` 目录下，然后在页面中就可以通过 `<svg-icon />` 组件使用了，name 就是 svg 文件名，如下：
+使用 SVG 图标文件也很简单，首先将 svg 文件放到 `/src/assets/icons/` 目录下，然后在页面中就可以通过 `<svg-icon />` 组件使用了，name 就是 svg 文件名，如下：
 
 ```vue:no-line-numbers
 <!-- <svg-icon> 组件无需手动注册即可使用 -->
@@ -75,7 +75,7 @@ import { search } from '@element-plus/icons'
 
 ## 图片
 
-框架用到的图片资源都放在 `./src/assets/images/` 目录下，可自行新建文件夹分类管理。
+框架用到的图片资源都放在 `/src/assets/images/` 目录下，可自行新建文件夹分类管理。
 
 ## 精灵图
 
@@ -87,7 +87,7 @@ import { search } from '@element-plus/icons'
 但 HTTP/2 的**多路复用**特性，已经不太需要精灵图合并了，我们更建议使用 SVG 图标代替精灵图
 :::
 
-精灵图原始图片的存放位置位于 `./src/assets/sprites/` 目录下，注意按文件夹区分。
+精灵图原始图片的存放位置位于 `/src/assets/sprites/` 目录下，注意按文件夹区分。
 
 项目运行前会根据文件夹生成对应的精灵图文件（精灵图图片和 `.scss` 资源文件），多个文件夹则会生成多个精灵图文件。需要注意的是，在项目运行时，修改文件夹里的图片，会重新生成相关精灵图文件，但如果新建文件夹，则需要重新运行项目才会生成对应精灵图文件。
 
@@ -157,9 +157,9 @@ import { search } from '@element-plus/icons'
 
 ## 样式
 
-样式存放目录为 `./src/assets/styles/` ，因为 Vue 的文件特性，页面样式建议写在 `.vue` 文件里，所以该目录只存放全局样式，方便统一管理。
+样式存放目录为 `/src/assets/styles/` ，因为 Vue 的文件特性，页面样式建议写在 `.vue` 文件里，所以该目录只存放全局样式，方便统一管理。
 
-此目录下还有一个特殊目录，即 `./src/assets/styles/resources/` ，这是全局 SCSS 资源目录，首先这个目录里只支持 `.scss` 文件，其次在这个目录里的文件，无需在页面上引用即可生效并使用。
+此目录下还有一个特殊目录，即 `/src/assets/styles/resources/` ，这是全局 SCSS 资源目录，首先这个目录里只支持 `.scss` 文件，其次在这个目录里的文件，无需在页面上引用即可生效并使用。
 
 同样，精灵图目录下生成的 SCSS 资源也是全局可调用的。
 
@@ -175,7 +175,7 @@ import { search } from '@element-plus/icons'
 与 Vue2 版本不同，这里所谓的“全局组件”并不会注册到全局，而是在使用的时候自动引入，该特性由 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) 提供支持。
 :::
 
-全局组件存放在 `./src/components/` 目录下，需要注意各个组件按文件夹进行区分。
+全局组件存放在 `/src/components/` 目录下，需要注意各个组件按文件夹进行区分。
 
 每个组件的文件夹内至少保留一个文件名为 `index.vue` 的组件入口（可参考 `SvgIcon` 组件），文件夹名称即为组件名。
 

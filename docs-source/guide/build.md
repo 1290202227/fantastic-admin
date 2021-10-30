@@ -56,7 +56,7 @@ VITE_BUILD_DROP_CONSOLE = true
 VITE_BUILD_PWA = true
 ```
 
-在 `./src/main.js` 开启 pwa 相关文件的引入
+在 `/src/main.js` 开启 pwa 相关文件的引入
 
 ```js:no-line-numbers
 // PWA

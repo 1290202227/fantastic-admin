@@ -47,7 +47,7 @@ this.$api.post('news/create', {
 
 ### 拦截器
 
-在 `./src/api/index.js` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。但因为每个公司提供的接口标准不同，所以该文件拦截器部分的代码，需要开发者根据实际情况去修改调整。
+在 `/src/api/index.js` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。但因为每个公司提供的接口标准不同，所以该文件拦截器部分的代码，需要开发者根据实际情况去修改调整。
 
 代码很简单，首先初始化 axios 对象，然后 `axios.interceptors.request.use()` 和 `axios.interceptors.response.use()` 就分别是请求和响应的拦截代码了。
 
@@ -106,7 +106,7 @@ this.$api.get('/new/list', {
 VITE_APP_API_BASEURL_2 = 此处填写接口地址
 ```
 
-然后把 `./src/api/index.js` 文件复制一份，例如就叫 `./src/api/index2.js` ，并且将代码中使用到 `VITE_APP_API_BASEURL` 也替换为 `VITE_APP_API_BASEURL_2` ，最后在 `./src/util/global.properties.js` 文件里引入：
+然后把 `/src/api/index.js` 文件复制一份，例如就叫 `/src/api/index2.js` ，并且将代码中使用到 `VITE_APP_API_BASEURL` 也替换为 `VITE_APP_API_BASEURL_2` ，最后在 `/src/util/global.properties.js` 文件里引入：
 
 ```js:no-line-numbers
 import api2 from '@/api/index2'
@@ -123,7 +123,7 @@ this.$api.get('/new/list')
 this.$api2.get('/new/list')
 ```
 
-需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `./src/api/index2.js` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
+需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `/src/api/index2.js` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
 
 ```js:no-line-numbers {2}
 const api = axios.create({
@@ -165,7 +165,7 @@ Mock 数据编写规则请阅读 [Mockjs](https://github.com/nuysoft/Mock) 官�
 
 ### 开发环境 mock
 
-mock 文件存放在 `./src/mock/` 下，建议按照不同模块区分文件夹。文件新增或修改后会自动更新，不需要手动重启，可以在代码控制台查看日志信息。
+mock 文件存放在 `/src/mock/` 下，建议按照不同模块区分文件夹。文件新增或修改后会自动更新，不需要手动重启，可以在代码控制台查看日志信息。
 
 以下为示例代码：
 

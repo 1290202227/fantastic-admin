@@ -95,7 +95,7 @@ appWidthMode: 'center-max-width'
 
 ## 变量
 
-布局相关的部分宽高变量存放在 `./src/assets/styles/resources/layout.scss` 文件中。
+布局相关的部分宽高变量存放在 `/src/assets/styles/resources/layout.scss` 文件中。
 
 ```scss
 // 这是一个复合变量

@@ -10,13 +10,13 @@
 
 ## 头部导航布局
 
-**头部导航布局**只需在 `./src/setting.js` 设置 `showHeader: true` 即可，展示效果如下：
+**头部导航布局**只需在 `/src/setting.js` 设置 `showHeader: true` 即可，展示效果如下：
 
 <p><img :src="$withBase('/vue2/basic-layout-header.png')" /></p>
 
 ## 单侧边栏布局
 
-如果要调整为**单侧边栏布局**，则需要到 `./src/router/index.js` 路由配置文件里找到下面这段代码，并注释掉高亮部分代码。
+如果要调整为**单侧边栏布局**，则需要到 `/src/router/index.js` 路由配置文件里找到下面这段代码，并注释掉高亮部分代码。
 
 ```js {22}
 // 当 children 不为空的主导航只有一项时，则隐藏

@@ -20,7 +20,7 @@
 
 ## 使用
 
-将上一步下载的压缩包解压并放入 `./src/assets/fonts/` 目录下，注意按文件夹区分，随后引入文件夹中的 `stylesheet.css` 即可使用，以 Digital 7 字体为例：
+将上一步下载的压缩包解压并放入 `/src/assets/fonts/` 目录下，注意按文件夹区分，随后引入文件夹中的 `stylesheet.css` 即可使用，以 Digital 7 字体为例：
 
 ```scss
 @import '../../assets/fonts/digital-7/stylesheet.css';

@@ -6,7 +6,7 @@
 
 ## 基础版
 
-基础版只提供一套主题，但可自行修改关键颜色变量，实现主题自定义，相关代码在 `./src/assets/styles/resources/variables.scss` 里。
+基础版只提供一套主题，但可自行修改关键颜色变量，实现主题自定义，相关代码在 `/src/assets/styles/resources/variables.scss` 里。
 
 ```scss
 // 应用背景色
@@ -69,7 +69,7 @@ $g-sidebar-width: var(--real-sidebar-width);
 theme: 'default'
 ```
 
-如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题，和基础版不同的是，专业版主题相关代码在 `./src/assets/styles/resources/themes.scss` 里。由于代码比较多，下面只截取部分。
+如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题，和基础版不同的是，专业版主题相关代码在 `/src/assets/styles/resources/themes.scss` 里。由于代码比较多，下面只截取部分。
 
 ```scss
 $themes: (
@@ -142,7 +142,7 @@ $themes: (
 );
 ```
 
-布局相关的部分宽高变量存放在 `./src/assets/styles/resources/layout.scss` 文件中。
+布局相关的部分宽高变量存放在 `/src/assets/styles/resources/layout.scss` 文件中。
 
 ```scss
 // 这是一个复合变量

@@ -72,5 +72,5 @@ VITE_BUILD_COMPRESS = gzip,brotli
 
 ## 框架配置
 
-框架提供的所有可选配置项都存放在 `./src/settings.js` 文件里，开发者可以修改保存查看效果。
+框架提供的所有可选配置项都存放在 `/src/settings.js` 文件里，开发者可以修改保存查看效果。
 

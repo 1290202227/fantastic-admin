@@ -38,11 +38,11 @@ vue-element-admin 一共只提供了 6 个配置项（`title` `showSettings` `ta
 
 #### SVG 图标
 
-vue-element-admin 将 svg 文件存放在 `./src/icons/svg/` 目录下，这部分的 svg 文件可直接拷贝到 Fantastic-admin 的 `./src/assets/icon/` 目录下，并且我们还提供了 `<svg-icon />` 组件方便直接使用，详细可阅读《[全局资源 - SVG图标](global-resources.md#svg-图标)》。
+vue-element-admin 将 svg 文件存放在 `/src/icons/svg/` 目录下，这部分的 svg 文件可直接拷贝到 Fantastic-admin 的 `/src/assets/icon/` 目录下，并且我们还提供了 `<svg-icon />` 组件方便直接使用，详细可阅读《[全局资源 - SVG图标](global-resources.md#svg-图标)》。
 
 #### 图片
 
-vue-element-admin 将图片存放在 `./src/assets/` 目录下，这部分的图片资源可直接拷贝到 Fantastic-admin 的 `./src/assets/images/` 目录下即可。
+vue-element-admin 将图片存放在 `/src/assets/` 目录下，这部分的图片资源可直接拷贝到 Fantastic-admin 的 `/src/assets/images/` 目录下即可。
 
 #### 精灵图
 
@@ -50,19 +50,19 @@ vue-element-admin 将图片存放在 `./src/assets/` 目录下，这部分的图
 
 #### 样式
 
-vue-element-admin 将样式存放在 `./src/styles/` 目录下，这个目录存放的基本是和框架相关的样式，迁移过程中基本是无需关注的，你只需要关注你新增的样式文件，将这些文件拷贝到 Fantastic-admin 的 `./src/assets/styles/` 目录下，并在相关使用到的地方引入即可。
+vue-element-admin 将样式存放在 `/src/styles/` 目录下，这个目录存放的基本是和框架相关的样式，迁移过程中基本是无需关注的，你只需要关注你新增的样式文件，将这些文件拷贝到 Fantastic-admin 的 `/src/assets/styles/` 目录下，并在相关使用到的地方引入即可。
 
-另外 Fantastic-admin 还提供了一个 `./src/assets/styles/resources/` 目录用来单独存放 SCSS 资源，这个目录下的文件会被框架自动引入，可在页面上直接使用，详细可阅读《[全局资源 - 样式](global-resources.md#样式)》。
+另外 Fantastic-admin 还提供了一个 `/src/assets/styles/resources/` 目录用来单独存放 SCSS 资源，这个目录下的文件会被框架自动引入，可在页面上直接使用，详细可阅读《[全局资源 - 样式](global-resources.md#样式)》。
 
 #### 组件
 
-vue-element-admin 将组件存放在 `./src/components/` 目录下，并且使用时需要单独注册，而 Fantastic-admin 提供了全局组件自动注册的特性，你只需将全局组件同样放到 Fantastic-admin 的 `./src/components/` 目录下即可在页面中直接使用，详细可阅读《[全局资源 - 组件](global-resources.md#组件)》。
+vue-element-admin 将组件存放在 `/src/components/` 目录下，并且使用时需要单独注册，而 Fantastic-admin 提供了全局组件自动注册的特性，你只需将全局组件同样放到 Fantastic-admin 的 `/src/components/` 目录下即可在页面中直接使用，详细可阅读《[全局资源 - 组件](global-resources.md#组件)》。
 
 ### 与服务端交互
 
-vue-element-admin 的 `./src/utils/request.js` 对应了 Fantastic-admin 的 `./src/api/index.js` 文件，它们都对 axios 进行了封装，便于统一处理 POST 和 GET 请求，你可以根据原有的配置逐行迁移代码。
+vue-element-admin 的 `/src/utils/request.js` 对应了 Fantastic-admin 的 `/src/api/index.js` 文件，它们都对 axios 进行了封装，便于统一处理 POST 和 GET 请求，你可以根据原有的配置逐行迁移代码。
 
-另外在 vue-element-admin 的 `./src/api/` 目录下存放了以模块为维度拆分的独立文件，方便统一管理不同模块的所有接口请求，这在大型项目中是很有必要的，而 Fantastic-admin 并未提供特定目录，如果你有这个需求，可以自行建立一个文件夹用来管理这部分文件。
+另外在 vue-element-admin 的 `/src/api/` 目录下存放了以模块为维度拆分的独立文件，方便统一管理不同模块的所有接口请求，这在大型项目中是很有必要的，而 Fantastic-admin 并未提供特定目录，如果你有这个需求，可以自行建立一个文件夹用来管理这部分文件。
 
 ### 路由
 
