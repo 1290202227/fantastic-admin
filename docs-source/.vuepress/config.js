@@ -140,10 +140,10 @@ module.exports = {
 						text: 'Fantastaic-admin',
 						link: 'https://hooray.gitee.io/fantastic-admin'
 					},
-					// {
-					// 	text: 'Fantastaic-admin (探索版)',
-					// 	link: 'https://hooray.gitee.io/fantastic-admin-discovery'
-					// }
+					{
+						text: 'Fantastaic-admin (探索版)',
+						link: 'https://hooray.gitee.io/fantastic-admin-discovery'
+					}
 				]
 			}
 		],
