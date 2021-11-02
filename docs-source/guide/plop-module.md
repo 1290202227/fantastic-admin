@@ -148,7 +148,9 @@ function goBack() {
 最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/util/pagination.js` 方便复用。
 
 ```js:no-line-numbers
-import { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } from '@/util/pagination.js'
+import usePagination from '@/util/pagination.js'
+
+const { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } = usePagination()
 ```
 
 接着在 `data` 里存放的是标准模块提供的一些配置项和必要数据参数字段。
