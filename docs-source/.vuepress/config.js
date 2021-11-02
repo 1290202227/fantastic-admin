@@ -10,19 +10,20 @@ module.exports = {
 		['keywords', { content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
 		['description', { content: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite2 技术栈。' }],
 		['script', {}, `var _hmt = _hmt || [];
+		_hmt.push(['_requirePlugin', 'UrlChangeTracker', {
+			shouldTrackUrlChange: function(newPath, oldPath) {
+				return newPath && oldPath;
+			}
+		}]);
 		(function() {
+			var hm = document.createElement("script");
 			if (location.origin.includes('gitee')) {
-				var hm = document.createElement("script");
 				hm.src = "https://hm.baidu.com/hm.js?ba0ee7b31f404b7dc10bfcd8bdc7183d";
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(hm, s);
-			}
-			if (location.origin.includes('github')) {
-				var hm = document.createElement("script");
+			} else {
 				hm.src = "https://hm.baidu.com/hm.js?d07a64f7a02cd5e9c01e1b36948ac4a5";
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(hm, s);
 			}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
 		})();`]
 	],
 	themeConfig: {

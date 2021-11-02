@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="generator" content="VuePress 2.0.0-beta.26">
     <link rel="icon" href="./favicon.ico"><keywords content="fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template"></keywords><description content="一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite2 技术栈。"></description><script>var _hmt = _hmt || [];
+		_hmt.push(['_requirePlugin', 'UrlChangeTracker', {
+			shouldTrackUrlChange: function(newPath, oldPath) {
+				return newPath && oldPath;
+			}
+		}]);
 		(function() {
+			var hm = document.createElement("script");
 			if (location.origin.includes('gitee')) {
-				var hm = document.createElement("script");
 				hm.src = "https://hm.baidu.com/hm.js?ba0ee7b31f404b7dc10bfcd8bdc7183d";
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(hm, s);
-			}
-			if (location.origin.includes('github')) {
-				var hm = document.createElement("script");
+			} else {
 				hm.src = "https://hm.baidu.com/hm.js?d07a64f7a02cd5e9c01e1b36948ac4a5";
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(hm, s);
 			}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
 		})();</script><title>构建与预览 | Fantastic-admin 官网</title><meta name="description" content="一款开箱即用的 Vue 中后台管理系统框架">
-    <link rel="modulepreload" href="/fantastic-admin/assets/app.11a7de6c.js"><link rel="modulepreload" href="/fantastic-admin/assets/build.html.b1c38a58.js"><link rel="modulepreload" href="/fantastic-admin/assets/plugin-vue_export-helper.5a098b48.js"><link rel="modulepreload" href="/fantastic-admin/assets/build.html.1c4e092a.js">
+    <link rel="modulepreload" href="/fantastic-admin/assets/app.21a626a0.js"><link rel="modulepreload" href="/fantastic-admin/assets/build.html.8d56a29f.js"><link rel="modulepreload" href="/fantastic-admin/assets/build.html.1c4e092a.js">
     <link rel="stylesheet" href="/fantastic-admin/assets/style.574dbb1c.css">
   </head>
   <body>
@@ -35,6 +36,6 @@
 </code></pre></div><p>在 <code>/src/main.js</code> 开启 pwa 相关文件的引入</p><div class="language-javascript ext-js"><pre class="language-javascript"><code><span class="token comment">// PWA</span>
 <span class="token keyword">import</span> <span class="token string">&#39;./pwa&#39;</span>
 </code></pre></div><p>最后在 <code>./vite/plugins/pwa.js</code> 文件里修改 manifest 信息，对应的图片目录为 <code>./public/pwa_icons/</code> 。</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><span class="meta-item-info">2021/10/30 上午9:15:11</span></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: 304327508@qq.com">hooray</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"> ← <a href="/fantastic-admin/guide/global-resources.html" class="nav-link" aria-label="全局资源"><!--[--><!--]--> 全局资源 <!--[--><!--]--></a></span><!----></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/fantastic-admin/assets/app.11a7de6c.js" defer></script>
+    <script type="module" src="/fantastic-admin/assets/app.21a626a0.js" defer></script>
   </body>
 </html>
