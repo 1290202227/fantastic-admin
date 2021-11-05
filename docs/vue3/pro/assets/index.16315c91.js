@@ -1,9 +1,0 @@
-
-/**
- * 由 Fantastic-admin 提供技术支持
- * https://hooray.gitee.io/fantastic-admin/
- * Powered by Fantastic-admin
- * https://hooray.github.io/fantastic-admin/
- */
-    
-import{_ as g}from"./plugin-vue_export-helper.5a098b48.js";import{a3 as x,o as b,r as l,ar as h,O as $,l as j,L as y,s,n,h as I}from"./vendor.cb7139c2.js";const L={props:{id:{type:[Number,String],default:""},departmentId:{type:[Number,String],default:""}},setup(m,{expose:d}){const i=m,{proxy:t}=I(),e=x({loading:!1,form:{id:i.id,department_id:i.departmentId,title:""},rules:{title:[{required:!0,message:"\u8BF7\u8F93\u5165\u804C\u4F4D\u540D\u79F0",trigger:"blur"}]}});b(()=>{e.value.form.id!=""&&u()});function u(){e.value.loading=!0,t.$api.get("pages_example/job/detail",{baseURL:"/mock/",params:{id:e.value.form.id,department_id:e.value.form.department_id}}).then(a=>{e.value.loading=!1,e.value.form.title=a.data.title})}return d({submit(a){e.value.form.id==""?t.$refs.form.validate(o=>{o&&t.$api.post("pages_example/job/create",e.value.form,{baseURL:"/mock/"}).then(()=>{t.$message.success({message:"\u6A21\u62DF\u65B0\u589E\u6210\u529F",center:!0}),a&&a()})}):t.$refs.form.validate(o=>{o&&t.$api.post("pages_example/job/edit",e.value.form,{baseURL:"/mock/"}).then(()=>{t.$message.success({message:"\u6A21\u62DF\u7F16\u8F91\u6210\u529F",center:!0}),a&&a()})})}}),(a,o)=>{const p=l("el-input"),f=l("el-form-item"),_=l("el-form"),c=h("loading");return $((j(),y("div",null,[s(_,{ref:(r,v)=>{v.form=r},model:e.value.form,rules:e.value.rules,"label-width":"120px","label-suffix":"\uFF1A"},{default:n(()=>[s(f,{label:"\u804C\u4F4D",prop:"title"},{default:n(()=>[s(p,{modelValue:e.value.form.title,"onUpdate:modelValue":o[0]||(o[0]=r=>e.value.form.title=r),placeholder:"\u8BF7\u8F93\u5165\u804C\u4F4D\u540D\u79F0"},null,8,["modelValue"])]),_:1})]),_:1},8,["model","rules"])],512)),[[c,e.value.loading]])}}};var w=g(L,[["__scopeId","data-v-12f0daae"]]);export{w as default};

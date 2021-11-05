@@ -1,0 +1,1 @@
+const e={key:"v-9b564c2e",path:"/guide/plop-module.html",title:"标准模块",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"特性介绍",slug:"特性介绍",children:[]}],filePathRelative:"guide/plop-module.md",git:{updatedTime:1635891109e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:4}]}};export{e as data};

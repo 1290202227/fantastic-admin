@@ -7,14 +7,14 @@
 ### Element Plus 图标
 
 :::warning 警告
-由于 Element Plus 团队正在将原有组件内的 Font Icon 向 SVG Icon 迁移，并且 Font Icon 将会在第一个正式版发布后被废弃，所以不建议继续使用。
+从 1.2.0-beta.1 开始，Element Plus 已不再支持 Font Icon ，而全面使用 SVG Icon 。
 :::
 
-框架已默认将 Element Plus 图标注册到全局，并且增加了 `el-` 前缀避免组件名冲突。你可以通过以下方式直接在页面中使用。
+框架已默认将 Element Plus 图标注册到全局，并且增加了 `el-icon-` 前缀避免组件名冲突。你可以通过以下方式直接在页面中使用。
 
 ```vue:no-line-numbers
 <el-icon>
-    <el-search />
+    <el-icon-search />
 </el-icon>
 ```
 
@@ -32,11 +32,11 @@ for (var key in ElementIcons) {
 
 ```vue:no-line-numbers
 <el-icon>
-    <search />
+    <Search />
 </el-icon>
 
 <script setup>
-import { search } from '@element-plus/icons'
+import { Search } from '@element-plus/icons'
 </script>
 ```
 
