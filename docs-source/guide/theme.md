@@ -1,10 +1,12 @@
 # 主题
 
-## 基础版
+## 框架主题
+
+### 基础版
 
 基础版主题样式存放在 `/src/assets/styles/resources/themes.scss` 文件中，均为 scss 变量，修改后即可在页面上查看效果。
 
-## 专业版
+### 专业版
 
 与基础版不同，专业版默认提供了 6 款主题，在配置文件中就可轻松切换。并且多款主题共存，支持在项目运行时动态切换。
 
@@ -59,3 +61,24 @@ $themes: (
 ```js:no-line-numbers
 theme: 'red'
 ```
+
+## Element Plus 主题
+
+> 详细可阅读 Element Plus 官方文档《[自定义主题](https://element-plus.gitee.io/zh-CN/guide/theming.html)》。
+
+最常见的需求就是修改 Element Plus 的主题色，你可以在 `/src/assets/style/` 目录下新建一个 `element.customized.scss` 文件，并在文件中写入以下代码。
+
+```scss
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+    $colors: (
+        "primary": (
+            "base": green
+        )
+    )
+);
+@use "element-plus/theme-chalk/src/index.scss" as *;
+```
+
+然后在 `/src/assets/style/global.scss` 文件的开头加入一行 `@import "element.customized.scss";` ，这时候在页面上能看到自定义的主题色已经生效了，但你还需要打开 `/src/main.js` 文件，找到 `import 'element-plus/dist/index.css'` 这一行并删除，以减少样式重复载入。
+
+除了修改主题色外，还可以到 Element Plus 的 [`packages/theme-chalk/src/common/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss) 中查找其它 scss 变量。
