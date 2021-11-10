@@ -484,8 +484,12 @@ const noLoginWhitelist = [
 
 ### 全局前置守卫
 
-<p><img :src="$withBase('/router1.png')" /></p>
+<p><img :src="$withBase('/router1.jpg')" /></p>
+
+<p><a :href="$withBase('/router1.jpg')" target="_blank">在新窗口打开</a></p>
 
 ### 全局后置钩子
 
-<p><img :src="$withBase('/router2.png')" /></p>
+<p><img :src="$withBase('/router2.jpg')" /></p>
+
+<p><a :href="$withBase('/router2.jpg')" target="_blank">在新窗口打开</a></p>
