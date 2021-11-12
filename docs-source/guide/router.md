@@ -1,4 +1,4 @@
-# 路由
+# 路由（导航）
 
 项目路由配置存放在 `./scr/router/modules/` 目录下，每一个 js 文件会被视为一个路由模块。
 
@@ -176,6 +176,14 @@ activeIcon: 'ri-star-fill'
 | boolean |    ✖️     | 子导航是否默认展开 |
 
 使用该特性时，建议在框架配置里关闭 `sidebarUniqueOpened` 设置。
+
+### permanent <Badge type="tip" text="专业版" vertical="top" />
+
+|  类型   | 是否必须 | 说明           |
+| :-----: | :------: | :------------- |
+| boolean |    ✖️     | 是否常驻标签页 |
+
+使用该特性时，需要在框架配置里开启 `enableTabbar` 设置，同时需注意，请勿在带有参数的路由上设置该特性。
 
 ### auth
 
