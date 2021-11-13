@@ -100,7 +100,7 @@
 		<td align="center">6 个</td>
 		<td align="center" style="color: #e34d22;">12 个</td>
 		<td align="center">8 个</td>
-		<td align="center" style="color: #e34d22;">15 个</td>
+		<td align="center" style="color: #e34d22;">16 个</td>
 	</tr>
 	<tr>
 		<td align="center">外链导航</td>
