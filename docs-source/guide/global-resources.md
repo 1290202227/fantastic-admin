@@ -24,7 +24,7 @@
 import * as ElementIcons from '@element-plus/icons'
 // 将 element-plus 的图标库注册到全局
 for (var key in ElementIcons) {
-    app.component(`El${ElementIcons[key].name}`, ElementIcons[key])
+    app.component(`ElIcon${ElementIcons[key].name}`, ElementIcons[key])
 }
 ```
 
