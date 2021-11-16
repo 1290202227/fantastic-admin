@@ -49,6 +49,10 @@ git clone -b template https://github.com/hooray/fantastic-admin.git
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
+在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
+
+<p><img :src="$withBase('/vscode.png')" /></p>
+
 ::: tip
 以上 5 个为 Visual Studio Code 必备扩展，以下则是作者建议安装的扩展，安装它们将在一定程度上提升开发效率。
 
