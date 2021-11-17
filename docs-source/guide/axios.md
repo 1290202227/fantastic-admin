@@ -1,6 +1,6 @@
 # 与服务端交互
 
-框架使用 [Axios](https://axios-http.com/) 做为异步请求工具，并进行了简单的封装。
+框架使用 [Axios](https://axios-http.com/zh/) 做为异步请求工具，并进行了简单的封装。
 
 ## 接口请求
 
