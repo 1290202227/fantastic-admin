@@ -49,18 +49,47 @@ VITE_BUILD_DROP_CONSOLE = true
 
 ### 生成 PWA 应用 <Badge type="tip" text="专业版" vertical="top" />
 
-在环境配置文件里开启 PWA 支持
+在环境配置文件里开启 PWA 支持。
 
 ```dot:no-line-numbers
 # 是否在打包时候生成PWA
 VITE_BUILD_PWA = true
 ```
 
-在 `/src/main.js` 开启 pwa 相关文件的引入
+然后分别在 `/src/main.js` 和 `/src/App.vue` 里取消注释，引入 PWA 所需的相关文件。
 
+:::: code-group
+
+::: code-group-item /src/main.js
 ```js:no-line-numbers
 // PWA
 import './pwa'
 ```
+:::
+
+::: code-group-item /src/App.vue
+```vue:no-line-numbers {4,9}
+<template>
+    <el-config-provider :locale="locales[$store.state.settings.defaultLang]">
+        <RouterView />
+        <ReloadPrompt />
+    </el-config-provider>
+</template>
+
+<script setup>
+import ReloadPrompt from '@/pwa/reloadPrompt.vue'
+</script>
+```
+:::
+
+::::
 
 最后在 `./vite/plugins/pwa.js` 文件里修改 manifest 信息，对应的图片目录为 `./public/pwa_icons/` 。
+
+当准备好这一切并构建部署到生产环境后，你就可以在浏览器的地址栏里看到多了一个小图标，点击后会提示你可以安装应用。
+
+<p><img :src="$withBase('/pwa1.png')" /></p>
+
+并且以后再次构建部署，访问地址时，如果浏览器存在缓存，导致页面没有载入最新的资源，在页面右下角还会出现相关提示框。
+
+<p><img :src="$withBase('/pwa2.png')" /></p>
