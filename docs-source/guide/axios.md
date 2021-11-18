@@ -21,6 +21,7 @@
 常用的 get 和 post 请求可使用以下的方法：
 
 :::: code-group
+
 ::: code-group-item get
 ```js:no-line-numbers
 this.$api.get('news/list', {
@@ -33,6 +34,7 @@ this.$api.get('news/list', {
 })
 ```
 :::
+
 ::: code-group-item post
 ```js:no-line-numbers
 this.$api.post('news/create', {
@@ -43,6 +45,7 @@ this.$api.post('news/create', {
 })
 ```
 :::
+
 ::::
 
 ### 拦截器

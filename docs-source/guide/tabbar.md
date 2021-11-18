@@ -99,16 +99,61 @@ enableTabbarMergeTabs: true
 
 ### 获取当前标签页 tabId
 
-`this.$tabbar.getId()`
+:::: code-group
+
+::: code-group-item Composition API
+```js:no-line-numbers
+const { proxy } = getCurrentInstance()
+proxy.$tabbar.getId()
+```
+:::
+
+::: code-group-item Options API
+```js:no-line-numbers
+this.$tabbar.getId()
+```
+:::
+
+::::
 
 ### 关闭指定标签页
 
-`this.$tabbar.closeById(tabId)`
+该方法接收一个 `tabId` 参数。
 
-该方法接收一个 `tabId` 参数
+:::: code-group
+
+::: code-group-item Composition API
+```js:no-line-numbers
+const { proxy } = getCurrentInstance()
+proxy.$tabbar.closeById(tabId)
+```
+:::
+
+::: code-group-item Options API
+```js:no-line-numbers
+this.$tabbar.closeById(tabId)
+```
+:::
+
+::::
 
 ### 关闭当前标签页
 
-`this.$tabbar.close(to)`
-
 该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，表示关闭当前标签页并跳转到指定路由，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
+
+:::: code-group
+
+::: code-group-item Composition API
+```js:no-line-numbers
+const { proxy } = getCurrentInstance()
+proxy.$tabbar.close(to)
+```
+:::
+
+::: code-group-item Options API
+```js:no-line-numbers
+this.$tabbar.close(to)
+```
+:::
+
+::::
