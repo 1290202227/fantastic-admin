@@ -8,7 +8,7 @@
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) 安装完后需切换到 v0.87.6 版本，最新版无法使用
 
 安装完后在 `settings.json` 中增加如下配置：
 
@@ -20,17 +20,6 @@
 ```
 
 完成以上配置，并确保项目已安装好依赖，便可查看最终效果：在保存代码时，会自动对当前文件进行代码格式化操作。
-
-:::warning 注意
-若以上扩展和配置均设置好后，依旧无法实现自动格式化代码的效果，请随便打开一个 `.js` 或 `.vue` 文件，检查编辑器右下角的 ESLint 是否显示为✔️，如果显示为🚫，则需要点击并选择“Allow”。
-
-<p>
-	<img :src="$withBase('/eslint1.png')" />
-	<img :src="$withBase('/eslint2.png')" />
-	<img :src="$withBase('/eslint3.png')" />
-</p>
-:::
-
 
 ## 配置
 
