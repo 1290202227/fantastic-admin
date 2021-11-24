@@ -144,6 +144,15 @@ module.exports = {
 					{
 						text: 'Fantastaic-admin (探索版)',
 						link: 'https://hooray.gitee.io/fantastic-admin-discovery'
+					},
+					{
+						text: '战略合作',
+						children: [
+							{
+								text: 'VForm 低代码表单',
+								link: 'https://www.vform666.com'
+							}
+						]
 					}
 				]
 			}
