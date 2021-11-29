@@ -142,8 +142,8 @@ module.exports = {
 						link: 'https://hooray.gitee.io/fantastic-admin'
 					},
 					{
-						text: 'Fantastaic-admin (探索版)',
-						link: 'https://hooray.gitee.io/fantastic-admin-discovery'
+						text: 'One-step-admin',
+						link: 'https://hooray.gitee.io/one-step-admin'
 					},
 					{
 						text: '战略合作',
