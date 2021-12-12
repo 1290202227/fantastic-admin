@@ -110,10 +110,6 @@ module.exports = {
 				link: 'https://space.bilibili.com/3079082/channel/detail?cid=156985'
 			},
 			{
-				text: '购买专业版',
-				link: '/buy.md'
-			},
-			{
 				text: '下载基础版',
 				children: [
 					{
@@ -125,6 +121,10 @@ module.exports = {
 						link: 'https://github.com/hooray/fantastic-admin'
 					}
 				]
+			},
+			{
+				text: '购买专业版',
+				link: '/buy.md'
 			},
 			{
 				text: '定制开发',
