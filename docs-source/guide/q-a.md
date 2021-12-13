@@ -35,3 +35,31 @@ export default {
 ## 项目 URL 里的 # 号能不能去掉
 
 这是因为路由默认使用的是 Hash 模式，你可以在 `/src/router/index.js` 修改为 HTML5 模式，但需要注意，开启 HTML5 模式，服务器也需要做相应的配置调整，详细请阅读《[Vue-router 不同的历史模式](https://next.router.vuejs.org/zh/guide/essentials/history-mode.html)》。
+
+## 页面切换后显示空白
+
+因为路由切换有使用到 `<transition>` 动画，而 `<transition>` 组件无法处理多个根节点的组件，所以请检查路由对应所有的页面文件的根节点是否均为单个。
+
+错误示例：
+
+```vue:no-line-numbers
+<template>
+    <!-- 需要注意，注释也会被视为一个节点 -->
+    <h1>text h1</h1>
+    <h2>text h2</h2>
+</template>
+```
+
+正确示例：
+
+```vue:no-line-numbers
+<template>
+    <div>
+        <!-- 需要注意，注释也会被视为一个节点 -->
+        <h1>text h1</h1>
+        <h2>text h2</h2>
+    </div>
+</template>
+```
+
+相关 [Issue](https://github.com/vuejs/vue-next/issues/1850) 说明
