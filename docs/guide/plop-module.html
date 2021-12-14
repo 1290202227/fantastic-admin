@@ -20,7 +20,7 @@
 			var s = document.getElementsByTagName("script")[0];
 			s.parentNode.insertBefore(hm, s);
 		})();</script><title>标准模块 | Fantastic-admin 官网</title><meta name="description" content="一款开箱即用的 Vue 中后台管理系统框架">
-    <link rel="modulepreload" href="/fantastic-admin/assets/app.89fbd6c9.js"><link rel="modulepreload" href="/fantastic-admin/assets/plop-module.html.681d302b.js"><link rel="modulepreload" href="/fantastic-admin/assets/plugin-vue_export-helper.5a098b48.js"><link rel="modulepreload" href="/fantastic-admin/assets/plop-module.html.2ac056d7.js">
+    <link rel="modulepreload" href="/fantastic-admin/assets/app.59c66187.js"><link rel="modulepreload" href="/fantastic-admin/assets/plop-module.html.b7161e8f.js"><link rel="modulepreload" href="/fantastic-admin/assets/plugin-vue_export-helper.5a098b48.js"><link rel="modulepreload" href="/fantastic-admin/assets/plop-module.html.2ac056d7.js">
     <link rel="stylesheet" href="/fantastic-admin/assets/style.574dbb1c.css">
   </head>
   <body>
@@ -173,6 +173,6 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><p>再往下就是需要你修改或编写业务代码的部分，这里就不继续展开了。</p><p>详情页的代码就不多介绍了，相对比较简单，可自行阅读理解。其中表单部分单独封装成组件存放在 <code>/src/views/[模块文件夹]/components/DetailForm/index.vue</code> 里了，同样你在 <code>components/</code> 文件夹下还能看到另外一个 <code>FormMode</code> 的文件夹，这样的用意是让表单可以复用，<strong>可以通过路由跳转的形式进入详情页，也可以通过弹窗或抽屉的形式打开详情页</strong>。</p><p>可能有人会有疑问，为什么不在生成文件的时候直接让我选择用哪种形式，这样生成出来就是哪种，而是在生成好的代码文件里再进行配置？</p><p>这样设计的目的主要有三点：</p><ol><li><strong>合理使用</strong>。关于表单具体使用哪种展示模式比较好，我们的建议是，当表单与当前列表页关联性较强，内容少则使用弹窗，内容多则使用抽屉；而当表单与当前列表页关联性较弱，且内容多，则使用路由跳转，让新页面进行承载。</li><li><strong>方便后期维护</strong>。考虑到需求会变，可能一开始是一个很简单的表单，后期需求一点点增加，变成了一个庞大的表单，这时候就要从弹窗或抽屉改成路由跳转，反之也可能是从路由跳转改成弹窗或抽屉，处理起来都很麻烦。所以方便后期维护，这部分是有意而为之，做成了 3 种形式共存，通过配置可一键切换。</li><li><strong>跨模块的组件调用</strong>。例如有两个管理模块，一个用户管理，一个部门管理，当我在填写新增用户表单的时候，表单项里有一项是选择部门，这时候部门可能还没创建，但表单已经填写一半了。如果让用户离开页面去部门管理里创建好部门后，再回来新建用户，先不说数据如何缓存的问题，光是操作流被打断，页面跳来跳去就很影响用户体验了。所以这个时候就可以在选择部门后面放一个新增部门的操作按钮，点击后弹出新增部门的弹窗，新增完成后弹窗关闭，让用户可以继续在新增用户的界面做后续操作。</li></ol><hr><p>当然标准模块也只是框架提供的一个标准，你可以沿用，也可以根据自己的需求指定一套标准，毕竟最终目的都是提高开发效率，同时也确保多人协作开发的时候有个统一标准，不会出现每个人做出来的模块风格都不一样。</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><span class="meta-item-info">2021/11/3 上午6:11:49</span></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: 304327508@qq.com">hooray</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"> ← <a href="/fantastic-admin/guide/plop.html" class="nav-link" aria-label="代码文件自动生成"><!--[--><!--]--> 代码文件自动生成 <!--[--><!--]--></a></span><span class="next"><a href="/fantastic-admin/guide/global-properties.html" class="nav-link" aria-label="全局属性"><!--[--><!--]--> 全局属性 <!--[--><!--]--></a> → </span></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/fantastic-admin/assets/app.89fbd6c9.js" defer></script>
+    <script type="module" src="/fantastic-admin/assets/app.59c66187.js" defer></script>
   </body>
 </html>
