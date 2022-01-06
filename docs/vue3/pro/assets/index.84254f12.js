@@ -1,9 +1,0 @@
-
-/**
- * 由 Fantastic-admin 提供技术支持
- * https://hooray.gitee.io/fantastic-admin/
- * Powered by Fantastic-admin
- * https://hooray.github.io/fantastic-admin/
- */
-    
-import{_ as g}from"./index.fd3dd73e.js";import{r as x,z as b,A as l,ay as $,X as h,o as y,j as C,D as s,C as i,G as D}from"./vendor.0c4fd540.js";const U={props:{id:{type:[Number,String],default:""}},setup(n,{expose:m}){const d=n,{proxy:t}=D(),e=x({loading:!1,form:{id:d.id,title:""},rules:{title:[{required:!0,message:"\u8BF7\u8F93\u5165\u90E8\u95E8\u540D\u79F0",trigger:"blur"}]}});b(()=>{e.value.form.id!=""&&u()});function u(){e.value.loading=!0,t.$api.get("pages_example/department/detail",{baseURL:"/mock/",params:{id:e.value.form.id}}).then(a=>{e.value.loading=!1,e.value.form.title=a.data.title})}return m({submit(a){e.value.form.id==""?t.$refs.form.validate(o=>{o&&t.$api.post("pages_example/department/create",e.value.form,{baseURL:"/mock/"}).then(()=>{t.$message.success({message:"\u6A21\u62DF\u65B0\u589E\u6210\u529F",center:!0}),a&&a()})}):t.$refs.form.validate(o=>{o&&t.$api.post("pages_example/department/edit",e.value.form,{baseURL:"/mock/"}).then(()=>{t.$message.success({message:"\u6A21\u62DF\u7F16\u8F91\u6210\u529F",center:!0}),a&&a()})})}}),(a,o)=>{const f=l("el-input"),p=l("el-form-item"),_=l("el-form"),c=$("loading");return h((y(),C("div",null,[s(_,{ref:(r,v)=>{v.form=r},model:e.value.form,rules:e.value.rules,"label-width":"120px","label-suffix":"\uFF1A"},{default:i(()=>[s(p,{label:"\u90E8\u95E8",prop:"title"},{default:i(()=>[s(f,{modelValue:e.value.form.title,"onUpdate:modelValue":o[0]||(o[0]=r=>e.value.form.title=r),placeholder:"\u8BF7\u8F93\u5165\u90E8\u95E8\u540D\u79F0"},null,8,["modelValue"])]),_:1})]),_:1},8,["model","rules"])],512)),[[c,e.value.loading]])}}};var w=g(U,[["__scopeId","data-v-6e65b896"]]);export{w as default};
