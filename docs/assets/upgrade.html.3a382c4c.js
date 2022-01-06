@@ -1,1 +1,0 @@
-const e={key:"v-298d4a56",path:"/guide-vue2/upgrade.html",title:"版本升级",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"guide-vue2/upgrade.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

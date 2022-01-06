@@ -1,0 +1,1 @@
+const e={key:"v-3a7c00d0",path:"/guide-vue2/position-fixed.html",title:"\u9AD8\u7EA7 position:fixed",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]},filePathRelative:"guide-vue2/position-fixed.md"};export{e as data};

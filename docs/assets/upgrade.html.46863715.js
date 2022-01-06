@@ -1,1 +1,0 @@
-const e={key:"v-765e61ae",path:"/guide/upgrade.html",title:"版本升级",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"guide/upgrade.md",git:{updatedTime:1639464155e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:2}]}};export{e as data};

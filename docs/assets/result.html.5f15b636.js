@@ -1,1 +1,0 @@
-const e={key:"v-f6d718c8",path:"/components/result.html",title:"Result 处理结果",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"Props",slug:"props",children:[]},{level:2,title:"Slot",slug:"slot",children:[]}],filePathRelative:"components/result.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

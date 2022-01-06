@@ -1,0 +1,1 @@
+const e={key:"v-a289f552",path:"/guide-vue2/storage.html",title:"\u79C1\u6709 Storage \u6570\u636E",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]},filePathRelative:"guide-vue2/storage.md"};export{e as data};

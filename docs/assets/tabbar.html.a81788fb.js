@@ -1,1 +1,0 @@
-const e={key:"v-b72e4bfc",path:"/guide-vue2/tabbar.html",title:"标签栏",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"guide-vue2/tabbar.md",git:{updatedTime:1630599394e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:1}]}};export{e as data};

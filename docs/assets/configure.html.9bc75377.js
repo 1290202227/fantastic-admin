@@ -1,1 +1,0 @@
-const e={key:"v-2039e99f",path:"/guide/configure.html",title:"配置",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"环境配置",slug:"环境配置",children:[]},{level:2,title:"框架配置",slug:"框架配置",children:[]}],filePathRelative:"guide/configure.md",git:{updatedTime:1637163423e3,contributors:[{name:"hooray",email:"304327508@qq.com",commits:3}]}};export{e as data};
