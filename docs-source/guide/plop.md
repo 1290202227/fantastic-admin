@@ -10,7 +10,7 @@
 
 - `page` 页面文件
 - `component` 组件文件
-- `store` Vuex 全局状态文件
+- `store` pinia 全局状态文件
 - `mock` mock 文件
 - `module` 页面模块文件 <Badge type="tip" text="专业版" vertical="top" />
 

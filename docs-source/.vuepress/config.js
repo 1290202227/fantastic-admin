@@ -171,7 +171,7 @@ module.exports = {
 						'theme.md',
 						'router.md',
 						'axios.md',
-						'vuex.md',
+						'store.md',
 						'global-resources.md',
 						'build.md'
 					]

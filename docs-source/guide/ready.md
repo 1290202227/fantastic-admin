@@ -82,5 +82,5 @@ Vue.js devtools 目前有两个版本，分别是正式版和 beta 版，需要�
 - [Vite](https://cn.vitejs.dev/)
 - [Vue 3](https://v3.cn.vuejs.org/) ([v3 迁移指南](https://v3.cn.vuejs.org/guide/migration/introduction.html))
 - [Vue Router 4](https://next.router.vuejs.org/zh/)
-- [Vuex 4](https://next.vuex.vuejs.org/zh/index.html)
+- [Pinia](https://pinia.vuejs.org/)
 - [Element Plus](https://element-plus.org/#/zh-CN)

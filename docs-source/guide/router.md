@@ -273,10 +273,10 @@ activeIcon: 'ri-star-fill'
 - `number` 展示形式为文本，当值小于等于 0 时隐藏
 - `string` 展示形式为文本，当值为空时隐藏
 
-如果标记需要动态更新，请设置为箭头函数形式，并返回外部变量，例如搭配 vuex 一起使用。
+如果标记需要动态更新，请设置为箭头函数形式，并返回外部变量，例如搭配 pinia 一起使用。
 
 ```js:no-line-numbers
-badge: () => store.state.global.number
+badge: () => globalStore.number
 ```
 
 ### link <Badge type="tip" text="专业版" vertical="top" />

@@ -92,7 +92,7 @@ this.$mainPageMaximize(status)
 
 ## 第三方库
 
-除 vue-router 、Vuex 、axios 之外，框架还默认集成了一些常用且成熟的类库或插件，熟悉并熟练使用它们，能让你在开发过程中更得心应手。
+除 vue-router 、pinia 、axios 之外，框架还默认集成了一些常用且成熟的类库或插件，熟悉并熟练使用它们，能让你在开发过程中更得心应手。
 
 ### [dayjs](https://day.js.org/zh-CN/)
 

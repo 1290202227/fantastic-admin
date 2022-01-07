@@ -6,20 +6,16 @@ Vue3 虽然提供了全新的 Composition API ，但它依旧支持 Options API 
 
 如果你还不熟悉 Composition API ，那么我们建议你阅读 Vue3 [官方文档](https://v3.cn.vuejs.org/guide/composition-api-introduction.html)了解；如果你已经熟悉 Composition API ，那么我们建议你在开发的时候，使用 [`<script setup>`](https://v3.cn.vuejs.org/api/sfc-script-setup.html) 语法糖进行开发，它将提高很多开发上的效率。
 
-同时得益于 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 的特性，在 `<script setup>` 里无需导入相关 API ，该依赖会自动导入（默认支持 vue 、vuex 和 vue-router）。
+同时得益于 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 的特性，在 `<script setup>` 里无需导入相关 API ，该依赖会自动导入（默认支持 vue 和 vue-router）。
 
 ```html:no-line-numbers {3-5}
 <script setup>
 // 原先需要手动 import 相关 API
 import { ref, computed } from 'vue'
-import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
-
-const store = useStore()
-store.dispatch('shopCar/getList')
 
 const route = useRoute()
 const router = useRouter()
@@ -33,9 +29,6 @@ router.push('/dashboard')
 // 现在直接使用即可
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
-
-const store = useStore()
-store.dispatch('shopCar/getList')
 
 const route = useRoute()
 const router = useRouter()
