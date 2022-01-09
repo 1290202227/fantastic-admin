@@ -63,12 +63,7 @@
 	</tr>
 	<tr>
 		<td align="center">长期维护更新，提供新特性</td>
-		<td colspan="2" align="center"></td>
-		<td colspan="2" align="center">✔️</td>
-	</tr>
-	<tr>
-		<td align="center">定期修复 bug</td>
-		<td colspan="2" align="center">✔️</td>
+		<td colspan="2" align="center">停止维护更新</td>
 		<td colspan="2" align="center">✔️</td>
 	</tr>
 	<tr>

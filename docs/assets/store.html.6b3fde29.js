@@ -1,1 +1,0 @@
-const t={key:"v-63acae84",path:"/guide/store.html",title:"\u5168\u5C40\u72B6\u6001\u7BA1\u7406",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"guide/store.md"};export{t as data};

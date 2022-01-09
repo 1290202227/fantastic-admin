@@ -157,27 +157,6 @@ this.$hotkeys
 
 ::::
 
-### [vue3-clipboard](https://github.com/soerenmartius/vue3-clipboard) <Badge type="tip" text="专业版" vertical="top" />
-
-剪贴板的库，可将数据拷贝到系统剪贴板中。
-
-:::: code-group
-
-::: code-group-item Composition API
-```js:no-line-numbers
-const { proxy } = getCurrentInstance()
-proxy.$clipboard
-```
-:::
-
-::: code-group-item Options API
-```js:no-line-numbers
-this.$clipboard
-```
-:::
-
-::::
-
 ### [QRCode](https://github.com/soldair/node-qrcode) <Badge type="tip" text="专业版" vertical="top" />
 
 生成二维码的库，可生成图片或 canvas 二维码。
